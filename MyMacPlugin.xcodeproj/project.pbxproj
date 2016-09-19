@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7901D8FED5400B1657E /* AppDelegate.m */; };
+		EFCAF7941D8FED5400B1657E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7931D8FED5400B1657E /* main.m */; };
+		EFCAF7971D8FED5400B1657E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7961D8FED5400B1657E /* ViewController.m */; };
+		EFCAF7991D8FED5400B1657E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCAF7981D8FED5400B1657E /* Assets.xcassets */; };
+		EFCAF79C1D8FED5400B1657E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCAF79A1D8FED5400B1657E /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMacPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCAF78F1D8FED5400B1657E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFCAF7901D8FED5400B1657E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFCAF7931D8FED5400B1657E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFCAF7951D8FED5400B1657E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EFCAF7961D8FED5400B1657E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EFCAF7981D8FED5400B1657E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFCAF79B1D8FED5400B1657E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFCAF79D1D8FED5400B1657E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFCAF7891D8FED5400B1657E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFCAF7831D8FED5400B1657E = {
+			isa = PBXGroup;
+			children = (
+				EFCAF78E1D8FED5400B1657E /* MyMacPlugin */,
+				EFCAF78D1D8FED5400B1657E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFCAF78D1D8FED5400B1657E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFCAF78E1D8FED5400B1657E /* MyMacPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAF78F1D8FED5400B1657E /* AppDelegate.h */,
+				EFCAF7901D8FED5400B1657E /* AppDelegate.m */,
+				EFCAF7951D8FED5400B1657E /* ViewController.h */,
+				EFCAF7961D8FED5400B1657E /* ViewController.m */,
+				EFCAF7981D8FED5400B1657E /* Assets.xcassets */,
+				EFCAF79A1D8FED5400B1657E /* Main.storyboard */,
+				EFCAF79D1D8FED5400B1657E /* Info.plist */,
+				EFCAF7921D8FED5400B1657E /* Supporting Files */,
+			);
+			path = MyMacPlugin;
+			sourceTree = "<group>";
+		};
+		EFCAF7921D8FED5400B1657E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAF7931D8FED5400B1657E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFCAF78B1D8FED5400B1657E /* MyMacPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCAF7A01D8FED5400B1657E /* Build configuration list for PBXNativeTarget "MyMacPlugin" */;
+			buildPhases = (
+				EFCAF7881D8FED5400B1657E /* Sources */,
+				EFCAF7891D8FED5400B1657E /* Frameworks */,
+				EFCAF78A1D8FED5400B1657E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyMacPlugin;
+			productName = MyMacPlugin;
+			productReference = EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFCAF7841D8FED5400B1657E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "影孤清";
+				TargetAttributes = {
+					EFCAF78B1D8FED5400B1657E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = V2Q2J8778N;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EFCAF7871D8FED5400B1657E /* Build configuration list for PBXProject "MyMacPlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFCAF7831D8FED5400B1657E;
+			productRefGroup = EFCAF78D1D8FED5400B1657E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFCAF78B1D8FED5400B1657E /* MyMacPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFCAF78A1D8FED5400B1657E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCAF7991D8FED5400B1657E /* Assets.xcassets in Resources */,
+				EFCAF79C1D8FED5400B1657E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFCAF7881D8FED5400B1657E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCAF7971D8FED5400B1657E /* ViewController.m in Sources */,
+				EFCAF7941D8FED5400B1657E /* main.m in Sources */,
+				EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EFCAF79A1D8FED5400B1657E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFCAF79B1D8FED5400B1657E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFCAF79E1D8FED5400B1657E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EFCAF79F1D8FED5400B1657E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EFCAF7A11D8FED5400B1657E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2Q2J8778N;
+				INFOPLIST_FILE = MyMacPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFCAF7A21D8FED5400B1657E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2Q2J8778N;
+				INFOPLIST_FILE = MyMacPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFCAF7871D8FED5400B1657E /* Build configuration list for PBXProject "MyMacPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCAF79E1D8FED5400B1657E /* Debug */,
+				EFCAF79F1D8FED5400B1657E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCAF7A01D8FED5400B1657E /* Build configuration list for PBXNativeTarget "MyMacPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCAF7A11D8FED5400B1657E /* Debug */,
+				EFCAF7A21D8FED5400B1657E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFCAF7841D8FED5400B1657E /* Project object */;
+}
