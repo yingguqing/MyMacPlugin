@@ -7,14 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF1644EC1D9273AE0049339B /* uncrustify in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EA1D9273AE0049339B /* uncrustify */; };
+		EF1644ED1D9273AE0049339B /* uncrustify.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EB1D9273AE0049339B /* uncrustify.cfg */; };
 		EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7901D8FED5400B1657E /* AppDelegate.m */; };
 		EFCAF7941D8FED5400B1657E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7931D8FED5400B1657E /* main.m */; };
 		EFCAF7971D8FED5400B1657E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7961D8FED5400B1657E /* ViewController.m */; };
 		EFCAF7991D8FED5400B1657E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCAF7981D8FED5400B1657E /* Assets.xcassets */; };
 		EFCAF79C1D8FED5400B1657E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCAF79A1D8FED5400B1657E /* Main.storyboard */; };
+		EFCAF7AA1D8FED6500B1657E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCAF7A91D8FED6500B1657E /* Cocoa.framework */; };
+		EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */; };
+		EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */; };
+		EFCAF7B71D8FED6500B1657E /* MyPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFCAF7BE1D8FED7D00B1657E /* CodeStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7BD1D8FED7D00B1657E /* CodeStatement.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EFCAF7B51D8FED6500B1657E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFCAF7841D8FED5400B1657E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFCAF7A61D8FED6500B1657E;
+			remoteInfo = MyPlugin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFCAF7BB1D8FED6500B1657E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EFCAF7B71D8FED6500B1657E /* MyPlugin.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EF1644EA1D9273AE0049339B /* uncrustify */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = uncrustify; sourceTree = "<group>"; };
+		EF1644EB1D9273AE0049339B /* uncrustify.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uncrustify.cfg; sourceTree = "<group>"; };
+		EF53F4B61D90EADC00451D6C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EF53F93B1D90F44C00451D6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMacPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCAF78F1D8FED5400B1657E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCAF7901D8FED5400B1657E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,6 +59,16 @@
 		EFCAF7981D8FED5400B1657E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFCAF79B1D8FED5400B1657E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFCAF79D1D8FED5400B1657E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCAF7A91D8FED6500B1657E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EFCAF7AD1D8FED6500B1657E /* MyPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPlugin.entitlements; sourceTree = "<group>"; };
+		EFCAF7AE1D8FED6500B1657E /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		EFCAF7B41D8FED6500B1657E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCAF7BC1D8FED7D00B1657E /* CodeStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeStatement.h; sourceTree = "<group>"; };
+		EFCAF7BD1D8FED7D00B1657E /* CodeStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeStatement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +79,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFCAF7A41D8FED6500B1657E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCAF7AA1D8FED6500B1657E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				EFCAF78E1D8FED5400B1657E /* MyMacPlugin */,
+				EFCAF7AB1D8FED6500B1657E /* MyPlugin */,
+				EFCAF7A81D8FED6500B1657E /* Frameworks */,
 				EFCAF78D1D8FED5400B1657E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */,
+				EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +132,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EFCAF7A81D8FED6500B1657E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF53F93B1D90F44C00451D6C /* Foundation.framework */,
+				EF53F4B61D90EADC00451D6C /* AppKit.framework */,
+				EFCAF7A91D8FED6500B1657E /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFCAF7AB1D8FED6500B1657E /* MyPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAF7AE1D8FED6500B1657E /* SourceEditorExtension.h */,
+				EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */,
+				EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */,
+				EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */,
+				EFCAF7BC1D8FED7D00B1657E /* CodeStatement.h */,
+				EFCAF7BD1D8FED7D00B1657E /* CodeStatement.m */,
+				EFCAF7B41D8FED6500B1657E /* Info.plist */,
+				EFCAF7AC1D8FED6500B1657E /* Supporting Files */,
+			);
+			path = MyPlugin;
+			sourceTree = "<group>";
+		};
+		EFCAF7AC1D8FED6500B1657E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF1644EA1D9273AE0049339B /* uncrustify */,
+				EF1644EB1D9273AE0049339B /* uncrustify.cfg */,
+				EFCAF7AD1D8FED6500B1657E /* MyPlugin.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,15 +177,34 @@
 				EFCAF7881D8FED5400B1657E /* Sources */,
 				EFCAF7891D8FED5400B1657E /* Frameworks */,
 				EFCAF78A1D8FED5400B1657E /* Resources */,
+				EFCAF7BB1D8FED6500B1657E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EFCAF7B61D8FED6500B1657E /* PBXTargetDependency */,
 			);
 			name = MyMacPlugin;
 			productName = MyMacPlugin;
 			productReference = EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EFCAF7A61D8FED6500B1657E /* MyPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCAF7B81D8FED6500B1657E /* Build configuration list for PBXNativeTarget "MyPlugin" */;
+			buildPhases = (
+				EFCAF7A31D8FED6500B1657E /* Sources */,
+				EFCAF7A41D8FED6500B1657E /* Frameworks */,
+				EFCAF7A51D8FED6500B1657E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyPlugin;
+			productName = MyPlugin;
+			productReference = EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -110,6 +220,12 @@
 						DevelopmentTeam = V2Q2J8778N;
 						ProvisioningStyle = Automatic;
 					};
+					EFCAF7A61D8FED6500B1657E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = V2Q2J8778N;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = EFCAF7871D8FED5400B1657E /* Build configuration list for PBXProject "MyMacPlugin" */;
@@ -119,6 +235,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = EFCAF7831D8FED5400B1657E;
 			productRefGroup = EFCAF78D1D8FED5400B1657E /* Products */;
@@ -126,6 +243,7 @@
 			projectRoot = "";
 			targets = (
 				EFCAF78B1D8FED5400B1657E /* MyMacPlugin */,
+				EFCAF7A61D8FED6500B1657E /* MyPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +255,15 @@
 			files = (
 				EFCAF7991D8FED5400B1657E /* Assets.xcassets in Resources */,
 				EFCAF79C1D8FED5400B1657E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCAF7A51D8FED6500B1657E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1644ED1D9273AE0049339B /* uncrustify.cfg in Resources */,
+				EF1644EC1D9273AE0049339B /* uncrustify in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +280,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFCAF7A31D8FED6500B1657E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */,
+				EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */,
+				EFCAF7BE1D8FED7D00B1657E /* CodeStatement.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFCAF7B61D8FED6500B1657E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFCAF7A61D8FED6500B1657E /* MyPlugin */;
+			targetProxy = EFCAF7B51D8FED6500B1657E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EFCAF79A1D8FED5400B1657E /* Main.storyboard */ = {
@@ -258,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V2Q2J8778N;
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
@@ -271,12 +417,60 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V2Q2J8778N;
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EFCAF7B91D8FED6500B1657E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MyPlugin/MyPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = V2Q2J8778N;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				INFOPLIST_FILE = MyPlugin/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin.MyPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPlugin/MyPlugin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = appex;
+			};
+			name = Debug;
+		};
+		EFCAF7BA1D8FED6500B1657E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MyPlugin/MyPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = V2Q2J8778N;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				INFOPLIST_FILE = MyPlugin/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin.MyPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPlugin/MyPlugin-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = appex;
 			};
 			name = Release;
 		};
@@ -299,6 +493,16 @@
 				EFCAF7A21D8FED5400B1657E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCAF7B81D8FED6500B1657E /* Build configuration list for PBXNativeTarget "MyPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCAF7B91D8FED6500B1657E /* Debug */,
+				EFCAF7BA1D8FED6500B1657E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
