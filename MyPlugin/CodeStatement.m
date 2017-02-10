@@ -393,14 +393,37 @@
 #pragma mark - 添加一个回车
 + (void)statementInsertEnter:(XCSourceEditorCommandInvocation *)invocation isUp:(BOOL)isUp {
     NSInteger insertIndex = -1;
-    for (XCSourceTextRange *range in invocation.buffer.selections) {
+    NSInteger index = 0;
+    XCSourceTextRange *range = [invocation.buffer.selections firstObject];
+    if (range) {
         insertIndex = range.start.line + (isUp ? 0 : 1);
-        [invocation.buffer.lines insertObject:@"\n" atIndex:insertIndex];
-        break;
+        NSMutableString *insertString = [NSMutableString string];
+        NSString *string = nil;
+        if (insertIndex == 0 || !isUp) {
+            string = invocation.buffer.lines[range.start.line];
+        } else {
+            string = invocation.buffer.lines[range.start.line - 1];
+        }
+        if (string) {
+            NSUInteger length = string.length;
+            NSRange range;
+            for (NSUInteger i = 0; i < length; i+=range.length) {
+                range = [string rangeOfComposedCharacterSequenceAtIndex:i];
+                NSString *s = [string substringWithRange:range];
+                if ([@" " isEqualToString:s]) {
+                    [insertString appendString:s];
+                } else {
+                    break;
+                }
+            }
+        }
+        index = insertString.length;
+        [insertString appendString:@"\n"];
+        [invocation.buffer.lines insertObject:insertString atIndex:insertIndex];
     }
     if (insertIndex > -1) {
         [invocation.buffer.selections removeAllObjects];
-        XCSourceTextRange *newRange = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(insertIndex, 0) end:XCSourceTextPositionMake(insertIndex, 0)];
+        XCSourceTextRange *newRange = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(insertIndex, index) end:XCSourceTextPositionMake(insertIndex, index)];
         [invocation.buffer.selections addObject:newRange];
     }
 }
