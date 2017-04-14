@@ -60,7 +60,23 @@
 
 			if (isAdd) {
 				// 添加注释
-				[stringNew insertString:@"//" atIndex:0];
+                NSInteger index = 0;
+                if (line && line.length > 0) {
+                    NSString *newString = line;
+                    while (newString.length > 0) {
+                        if ([newString hasPrefix:@" "]) {
+                            if (newString.length > 1) {
+                                index++;
+                                newString = [newString substringFromIndex:1];
+                            } else {
+                                break;
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+                }
+                [stringNew insertString:@"//" atIndex:index];
 			} else {
 				//删除注释
 				NSRange range = [stringNew rangeOfString:@"//"];
@@ -208,7 +224,7 @@
                 [strtup appendString:@" "];
             }
             
-            [strtup appendFormat:@" * <#%@ description#> \n",parameterName];
+            [strtup appendFormat:@" <#%@ description#> \n",parameterName];
             [insertStrings addObject:strtup];
             parameter = YES;
         }
