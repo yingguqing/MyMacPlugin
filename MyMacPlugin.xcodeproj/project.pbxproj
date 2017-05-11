@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EF1644EC1D9273AE0049339B /* uncrustify in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EA1D9273AE0049339B /* uncrustify */; };
 		EF1644ED1D9273AE0049339B /* uncrustify.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EB1D9273AE0049339B /* uncrustify.cfg */; };
+		EF69076C1EC44BE30000D401 /* ESClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6907691EC44BE30000D401 /* ESClassInfo.m */; };
+		EF69076D1EC44BE30000D401 /* ESJsonFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69076B1EC44BE30000D401 /* ESJsonFormatManager.m */; };
 		EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7901D8FED5400B1657E /* AppDelegate.m */; };
 		EFCAF7941D8FED5400B1657E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7931D8FED5400B1657E /* main.m */; };
 		EFCAF7971D8FED5400B1657E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7961D8FED5400B1657E /* ViewController.m */; };
@@ -50,6 +52,10 @@
 		EF1644EB1D9273AE0049339B /* uncrustify.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uncrustify.cfg; sourceTree = "<group>"; };
 		EF53F4B61D90EADC00451D6C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		EF53F93B1D90F44C00451D6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF6907681EC44BE30000D401 /* ESClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESClassInfo.h; sourceTree = "<group>"; };
+		EF6907691EC44BE30000D401 /* ESClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESClassInfo.m; sourceTree = "<group>"; };
+		EF69076A1EC44BE30000D401 /* ESJsonFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESJsonFormatManager.h; sourceTree = "<group>"; };
+		EF69076B1EC44BE30000D401 /* ESJsonFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESJsonFormatManager.m; sourceTree = "<group>"; };
 		EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMacPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCAF78F1D8FED5400B1657E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCAF7901D8FED5400B1657E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +96,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF6907671EC44BC70000D401 /* Json2PropertyExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EF6907681EC44BE30000D401 /* ESClassInfo.h */,
+				EF6907691EC44BE30000D401 /* ESClassInfo.m */,
+				EF69076A1EC44BE30000D401 /* ESJsonFormatManager.h */,
+				EF69076B1EC44BE30000D401 /* ESJsonFormatManager.m */,
+			);
+			path = Json2PropertyExtension;
+			sourceTree = "<group>";
+		};
 		EFCAF7831D8FED5400B1657E = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +162,7 @@
 		EFCAF7AB1D8FED6500B1657E /* MyPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				EF6907671EC44BC70000D401 /* Json2PropertyExtension */,
 				EFCAF7AE1D8FED6500B1657E /* SourceEditorExtension.h */,
 				EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */,
 				EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */,
@@ -284,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF69076D1EC44BE30000D401 /* ESJsonFormatManager.m in Sources */,
 				EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */,
 				EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */,
+				EF69076C1EC44BE30000D401 /* ESClassInfo.m in Sources */,
 				EFCAF7BE1D8FED7D00B1657E /* CodeStatement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

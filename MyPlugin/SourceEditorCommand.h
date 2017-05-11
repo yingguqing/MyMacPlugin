@@ -9,5 +9,5 @@
 #import <XcodeKit/XcodeKit.h>
 
 @interface SourceEditorCommand : NSObject <XCSourceEditorCommand>
-
+@property (nonatomic) BOOL isSwift;
 @end

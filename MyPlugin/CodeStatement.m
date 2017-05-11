@@ -77,8 +77,11 @@
                     }
                 }
                 [stringNew insertString:@"//" atIndex:index];
+                range.start = XCSourceTextPositionMake(range.start.line, range.start.column+2);
+                range.end = XCSourceTextPositionMake(range.start.line, range.start.column+2);
 			} else {
 				//删除注释
+                
 				NSRange range = [stringNew rangeOfString:@"//"];
 				[stringNew replaceCharactersInRange:range withString:@""];
 			}

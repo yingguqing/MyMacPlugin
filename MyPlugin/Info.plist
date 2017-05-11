@@ -120,6 +120,14 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>添加释放到dealloc里</string>
 				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).JsonToProperty</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>将Json转成h文件里的属性</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>SourceEditorExtension</string>
