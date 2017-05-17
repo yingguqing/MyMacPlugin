@@ -14,8 +14,11 @@
 
 @implementation AppDelegate
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)application {
+    return YES;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
 }
 
 

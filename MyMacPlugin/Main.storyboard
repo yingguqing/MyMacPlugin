@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="uKP-4e-x6h">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="qLr-js-j75">
+            <objects>
+                <application id="7A0-cY-Ivy" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="Wi2-Q5-1zc">
+                        <items>
+                            <menuItem title="MyMacPlugin" id="vnH-xd-CLD">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="MyMacPlugin" systemMenu="apple" id="ft1-SH-ZRE">
+                                    <items>
+                                        <menuItem title="退出" keyEquivalent="q" id="iTT-pI-siu"/>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </application>
+                <customObject id="vIQ-qM-Yja" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="22X-Dd-ycc">
+            <objects>
+                <windowController id="uKP-4e-x6h" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1dp-9b-AYY">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="uKP-4e-x6h" id="VGD-he-aJO"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="4NI-P1-lrj" kind="relationship" relationship="window.shadowedContentViewController" id="oqs-fs-ZC9"/>
+                    </connections>
+                </windowController>
+                <customObject id="2sj-oB-rMF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--影孤清的XCode插件-->
+        <scene sceneID="c48-bp-COT">
+            <objects>
+                <viewController title="影孤清的XCode插件" id="4NI-P1-lrj" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="z2N-zf-vyH">
+                        <rect key="frame" x="0.0" y="0.0" width="456" height="606"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MOq-B5-Tpt" userLabel="Open System Preferences">
+                                <rect key="frame" x="14" y="538" width="428" height="32"/>
+                                <buttonCell key="cell" type="push" title="设置快捷键" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Hb6-eM-2o3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="installKeyBindings:" target="4NI-P1-lrj" id="CjW-dq-LgP"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udM-4q-sgw">
+                                <rect key="frame" x="98" y="10" width="124" height="525"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Ms5-Z0-ici">
+                                    <font key="font" size="12" name="STSongti-SC-Regular"/>
+                                    <string key="title">向上复制选中
+
+向下复制选中
+
+删除选中行
+
+添加方法注释说明
+
+使用//注释
+
+格式化
+
+上一行回车
+
+下一行回车
+
+添加选中变量释放
+
+将Json转成属性
+
+自动生成创建解析方法
+
+选中字符大写
+
+选中字符小写</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAp-tf-reR">
+                                <rect key="frame" x="160" y="579" width="137" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="设置插件功能的快捷键" id="GF2-GN-dmU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzm-Nf-w5X">
+                                <rect key="frame" x="288" y="10" width="69" height="525"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="XGW-l6-leP">
+                                    <font key="font" size="12" name="STSongti-SC-Regular"/>
+                                    <string key="title">⌘ + ⌥ + ↑
+
+⌘ + ⌥ + ↓
+
+⌘ + ⇧ + D
+
+⌘ + ⌥ + /
+
+⌘ + /
+
+⌘ + ⇧ + F
+
+⌘ + ⇧ + ↩
+
+⌘ + ↩
+
+⌘ + K
+
+⌘ + ⌥ + J
+
+⌘ + J
+
+⌘ + Y
+
+⌘ + ⇧ + Y</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nzm-Nf-w5X" firstAttribute="top" secondItem="udM-4q-sgw" secondAttribute="top" id="7Jb-42-eZi"/>
+                            <constraint firstItem="SAp-tf-reR" firstAttribute="centerX" secondItem="z2N-zf-vyH" secondAttribute="centerX" id="7rj-Jp-1gz"/>
+                            <constraint firstItem="nzm-Nf-w5X" firstAttribute="bottom" secondItem="udM-4q-sgw" secondAttribute="bottom" id="H8p-d3-9lq"/>
+                            <constraint firstItem="udM-4q-sgw" firstAttribute="top" secondItem="MOq-B5-Tpt" secondAttribute="bottom" constant="10" id="KvK-bG-1Ws"/>
+                            <constraint firstItem="SAp-tf-reR" firstAttribute="top" secondItem="z2N-zf-vyH" secondAttribute="top" constant="10" id="PjQ-b6-kdo"/>
+                            <constraint firstAttribute="bottom" secondItem="udM-4q-sgw" secondAttribute="bottom" constant="10" id="mx3-c5-1aT"/>
+                            <constraint firstItem="udM-4q-sgw" firstAttribute="leading" secondItem="z2N-zf-vyH" secondAttribute="leading" constant="100" id="pJu-lw-Te0"/>
+                            <constraint firstItem="nzm-Nf-w5X" firstAttribute="leading" secondItem="udM-4q-sgw" secondAttribute="trailing" constant="70" id="s08-zv-DT1"/>
+                            <constraint firstItem="MOq-B5-Tpt" firstAttribute="top" secondItem="z2N-zf-vyH" secondAttribute="top" constant="40" id="vW9-jX-hZz"/>
+                            <constraint firstItem="MOq-B5-Tpt" firstAttribute="leading" secondItem="z2N-zf-vyH" secondAttribute="leading" constant="20" id="vdb-Y7-s8L"/>
+                            <constraint firstAttribute="trailing" secondItem="MOq-B5-Tpt" secondAttribute="trailing" constant="20" id="wSD-1g-eiU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="1Kl-vV-H7N" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="905"/>
+        </scene>
+    </scenes>
+</document>

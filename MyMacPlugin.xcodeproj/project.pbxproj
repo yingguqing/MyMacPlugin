@@ -9,18 +9,24 @@
 /* Begin PBXBuildFile section */
 		EF1644EC1D9273AE0049339B /* uncrustify in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EA1D9273AE0049339B /* uncrustify */; };
 		EF1644ED1D9273AE0049339B /* uncrustify.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EB1D9273AE0049339B /* uncrustify.cfg */; };
-		EF69076C1EC44BE30000D401 /* ESClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6907691EC44BE30000D401 /* ESClassInfo.m */; };
-		EF69076D1EC44BE30000D401 /* ESJsonFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69076B1EC44BE30000D401 /* ESJsonFormatManager.m */; };
+		EF16ABA61EC955C4007F668A /* ESClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16ABA31EC955C4007F668A /* ESClassInfo.m */; };
+		EF16ABA71EC955C4007F668A /* ESJsonFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16ABA51EC955C4007F668A /* ESJsonFormatManager.m */; };
+		EF16ABAA1EC955DE007F668A /* JsonToPropertyStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16ABA91EC955DE007F668A /* JsonToPropertyStatement.m */; };
+		EF7E87701ECC1DF800B97EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7E876F1ECC1DF800B97EC4 /* Main.storyboard */; };
+		EF7E87721ECC1E6C00B97EC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7E87711ECC1E6C00B97EC4 /* ViewController.m */; };
+		EF7E87761ECC1EB400B97EC4 /* CodeStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7E87751ECC1EB400B97EC4 /* CodeStatement.m */; };
+		EF7E87891ECC2F8000B97EC4 /* KeyBindingsInserter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7E87881ECC2F8000B97EC4 /* KeyBindingsInserter.m */; };
+		EF7E878C1ECC2FFF00B97EC4 /* UserKeyBindings.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF7E878A1ECC2FFF00B97EC4 /* UserKeyBindings.plist */; };
+		EF7E878D1ECC2FFF00B97EC4 /* yingguqing.idekeybindings in Resources */ = {isa = PBXBuildFile; fileRef = EF7E878B1ECC2FFF00B97EC4 /* yingguqing.idekeybindings */; };
 		EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7901D8FED5400B1657E /* AppDelegate.m */; };
 		EFCAF7941D8FED5400B1657E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7931D8FED5400B1657E /* main.m */; };
-		EFCAF7971D8FED5400B1657E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7961D8FED5400B1657E /* ViewController.m */; };
 		EFCAF7991D8FED5400B1657E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCAF7981D8FED5400B1657E /* Assets.xcassets */; };
-		EFCAF79C1D8FED5400B1657E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCAF79A1D8FED5400B1657E /* Main.storyboard */; };
 		EFCAF7AA1D8FED6500B1657E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCAF7A91D8FED6500B1657E /* Cocoa.framework */; };
 		EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */; };
 		EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */; };
 		EFCAF7B71D8FED6500B1657E /* MyPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		EFCAF7BE1D8FED7D00B1657E /* CodeStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7BD1D8FED7D00B1657E /* CodeStatement.m */; };
+		EFD482971EC981A0007B493A /* Until.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD482961EC981A0007B493A /* Until.m */; };
+		EFD4829F1EC9829E007B493A /* InitWithJsonStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD4829E1EC9829E007B493A /* InitWithJsonStatement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,20 +56,28 @@
 /* Begin PBXFileReference section */
 		EF1644EA1D9273AE0049339B /* uncrustify */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = uncrustify; sourceTree = "<group>"; };
 		EF1644EB1D9273AE0049339B /* uncrustify.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uncrustify.cfg; sourceTree = "<group>"; };
+		EF16ABA21EC955C4007F668A /* ESClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESClassInfo.h; sourceTree = "<group>"; };
+		EF16ABA31EC955C4007F668A /* ESClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESClassInfo.m; sourceTree = "<group>"; };
+		EF16ABA41EC955C4007F668A /* ESJsonFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESJsonFormatManager.h; sourceTree = "<group>"; };
+		EF16ABA51EC955C4007F668A /* ESJsonFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESJsonFormatManager.m; sourceTree = "<group>"; };
+		EF16ABA81EC955DE007F668A /* JsonToPropertyStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonToPropertyStatement.h; sourceTree = "<group>"; };
+		EF16ABA91EC955DE007F668A /* JsonToPropertyStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonToPropertyStatement.m; sourceTree = "<group>"; };
 		EF53F4B61D90EADC00451D6C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		EF53F93B1D90F44C00451D6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EF6907681EC44BE30000D401 /* ESClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESClassInfo.h; sourceTree = "<group>"; };
-		EF6907691EC44BE30000D401 /* ESClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESClassInfo.m; sourceTree = "<group>"; };
-		EF69076A1EC44BE30000D401 /* ESJsonFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESJsonFormatManager.h; sourceTree = "<group>"; };
-		EF69076B1EC44BE30000D401 /* ESJsonFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESJsonFormatManager.m; sourceTree = "<group>"; };
+		EF7E876F1ECC1DF800B97EC4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF7E87711ECC1E6C00B97EC4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF7E87731ECC1E8E00B97EC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF7E87741ECC1EB400B97EC4 /* CodeStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeStatement.h; sourceTree = "<group>"; };
+		EF7E87751ECC1EB400B97EC4 /* CodeStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeStatement.m; sourceTree = "<group>"; };
+		EF7E87871ECC2F8000B97EC4 /* KeyBindingsInserter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBindingsInserter.h; sourceTree = "<group>"; };
+		EF7E87881ECC2F8000B97EC4 /* KeyBindingsInserter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBindingsInserter.m; sourceTree = "<group>"; };
+		EF7E878A1ECC2FFF00B97EC4 /* UserKeyBindings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserKeyBindings.plist; sourceTree = "<group>"; };
+		EF7E878B1ECC2FFF00B97EC4 /* yingguqing.idekeybindings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = yingguqing.idekeybindings; sourceTree = "<group>"; };
 		EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMacPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCAF78F1D8FED5400B1657E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCAF7901D8FED5400B1657E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EFCAF7931D8FED5400B1657E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EFCAF7951D8FED5400B1657E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EFCAF7961D8FED5400B1657E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EFCAF7981D8FED5400B1657E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EFCAF79B1D8FED5400B1657E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFCAF79D1D8FED5400B1657E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCAF7A91D8FED6500B1657E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -73,8 +87,10 @@
 		EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
 		EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
 		EFCAF7B41D8FED6500B1657E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFCAF7BC1D8FED7D00B1657E /* CodeStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeStatement.h; sourceTree = "<group>"; };
-		EFCAF7BD1D8FED7D00B1657E /* CodeStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeStatement.m; sourceTree = "<group>"; };
+		EFD482951EC981A0007B493A /* Until.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Until.h; sourceTree = "<group>"; };
+		EFD482961EC981A0007B493A /* Until.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Until.m; sourceTree = "<group>"; };
+		EFD4829D1EC9829E007B493A /* InitWithJsonStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitWithJsonStatement.h; sourceTree = "<group>"; };
+		EFD4829E1EC9829E007B493A /* InitWithJsonStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitWithJsonStatement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +112,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF6907671EC44BC70000D401 /* Json2PropertyExtension */ = {
+		EF16ABA01EC955C4007F668A /* JsonToProperty */ = {
 			isa = PBXGroup;
 			children = (
-				EF6907681EC44BE30000D401 /* ESClassInfo.h */,
-				EF6907691EC44BE30000D401 /* ESClassInfo.m */,
-				EF69076A1EC44BE30000D401 /* ESJsonFormatManager.h */,
-				EF69076B1EC44BE30000D401 /* ESJsonFormatManager.m */,
+				EF16ABA11EC955C4007F668A /* Json2PropertyExtension */,
+				EF16ABA81EC955DE007F668A /* JsonToPropertyStatement.h */,
+				EF16ABA91EC955DE007F668A /* JsonToPropertyStatement.m */,
+			);
+			path = JsonToProperty;
+			sourceTree = "<group>";
+		};
+		EF16ABA11EC955C4007F668A /* Json2PropertyExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EF16ABA21EC955C4007F668A /* ESClassInfo.h */,
+				EF16ABA31EC955C4007F668A /* ESClassInfo.m */,
+				EF16ABA41EC955C4007F668A /* ESJsonFormatManager.h */,
+				EF16ABA51EC955C4007F668A /* ESJsonFormatManager.m */,
 			);
 			path = Json2PropertyExtension;
 			sourceTree = "<group>";
@@ -131,11 +157,10 @@
 			children = (
 				EFCAF78F1D8FED5400B1657E /* AppDelegate.h */,
 				EFCAF7901D8FED5400B1657E /* AppDelegate.m */,
-				EFCAF7951D8FED5400B1657E /* ViewController.h */,
-				EFCAF7961D8FED5400B1657E /* ViewController.m */,
-				EFCAF7981D8FED5400B1657E /* Assets.xcassets */,
-				EFCAF79A1D8FED5400B1657E /* Main.storyboard */,
-				EFCAF79D1D8FED5400B1657E /* Info.plist */,
+				EF7E87731ECC1E8E00B97EC4 /* ViewController.h */,
+				EF7E87711ECC1E6C00B97EC4 /* ViewController.m */,
+				EF7E87871ECC2F8000B97EC4 /* KeyBindingsInserter.h */,
+				EF7E87881ECC2F8000B97EC4 /* KeyBindingsInserter.m */,
 				EFCAF7921D8FED5400B1657E /* Supporting Files */,
 			);
 			path = MyMacPlugin;
@@ -144,7 +169,12 @@
 		EFCAF7921D8FED5400B1657E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF7E878A1ECC2FFF00B97EC4 /* UserKeyBindings.plist */,
+				EF7E878B1ECC2FFF00B97EC4 /* yingguqing.idekeybindings */,
+				EFCAF79D1D8FED5400B1657E /* Info.plist */,
 				EFCAF7931D8FED5400B1657E /* main.m */,
+				EFCAF7981D8FED5400B1657E /* Assets.xcassets */,
+				EF7E876F1ECC1DF800B97EC4 /* Main.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -162,14 +192,14 @@
 		EFCAF7AB1D8FED6500B1657E /* MyPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				EF6907671EC44BC70000D401 /* Json2PropertyExtension */,
+				EFD482941EC981A0007B493A /* Until */,
+				EF16ABA01EC955C4007F668A /* JsonToProperty */,
+				EFD482981EC981C5007B493A /* CodeStatement */,
+				EFD4829C1EC981E0007B493A /* InitWithJsonStatement */,
 				EFCAF7AE1D8FED6500B1657E /* SourceEditorExtension.h */,
 				EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */,
 				EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */,
 				EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */,
-				EFCAF7BC1D8FED7D00B1657E /* CodeStatement.h */,
-				EFCAF7BD1D8FED7D00B1657E /* CodeStatement.m */,
-				EFCAF7B41D8FED6500B1657E /* Info.plist */,
 				EFCAF7AC1D8FED6500B1657E /* Supporting Files */,
 			);
 			path = MyPlugin;
@@ -181,8 +211,36 @@
 				EF1644EA1D9273AE0049339B /* uncrustify */,
 				EF1644EB1D9273AE0049339B /* uncrustify.cfg */,
 				EFCAF7AD1D8FED6500B1657E /* MyPlugin.entitlements */,
+				EFCAF7B41D8FED6500B1657E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFD482941EC981A0007B493A /* Until */ = {
+			isa = PBXGroup;
+			children = (
+				EFD482951EC981A0007B493A /* Until.h */,
+				EFD482961EC981A0007B493A /* Until.m */,
+			);
+			path = Until;
+			sourceTree = "<group>";
+		};
+		EFD482981EC981C5007B493A /* CodeStatement */ = {
+			isa = PBXGroup;
+			children = (
+				EF7E87741ECC1EB400B97EC4 /* CodeStatement.h */,
+				EF7E87751ECC1EB400B97EC4 /* CodeStatement.m */,
+			);
+			path = CodeStatement;
+			sourceTree = "<group>";
+		};
+		EFD4829C1EC981E0007B493A /* InitWithJsonStatement */ = {
+			isa = PBXGroup;
+			children = (
+				EFD4829D1EC9829E007B493A /* InitWithJsonStatement.h */,
+				EFD4829E1EC9829E007B493A /* InitWithJsonStatement.m */,
+			);
+			path = InitWithJsonStatement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +294,7 @@
 					EFCAF78B1D8FED5400B1657E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = V2Q2J8778N;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					EFCAF7A61D8FED6500B1657E = {
@@ -271,8 +330,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7E878C1ECC2FFF00B97EC4 /* UserKeyBindings.plist in Resources */,
 				EFCAF7991D8FED5400B1657E /* Assets.xcassets in Resources */,
-				EFCAF79C1D8FED5400B1657E /* Main.storyboard in Resources */,
+				EF7E878D1ECC2FFF00B97EC4 /* yingguqing.idekeybindings in Resources */,
+				EF7E87701ECC1DF800B97EC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +353,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCAF7971D8FED5400B1657E /* ViewController.m in Sources */,
+				EF7E87721ECC1E6C00B97EC4 /* ViewController.m in Sources */,
 				EFCAF7941D8FED5400B1657E /* main.m in Sources */,
 				EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */,
+				EF7E87891ECC2F8000B97EC4 /* KeyBindingsInserter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,11 +364,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF69076D1EC44BE30000D401 /* ESJsonFormatManager.m in Sources */,
+				EF16ABA71EC955C4007F668A /* ESJsonFormatManager.m in Sources */,
+				EFD4829F1EC9829E007B493A /* InitWithJsonStatement.m in Sources */,
+				EF7E87761ECC1EB400B97EC4 /* CodeStatement.m in Sources */,
 				EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */,
 				EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */,
-				EF69076C1EC44BE30000D401 /* ESClassInfo.m in Sources */,
-				EFCAF7BE1D8FED7D00B1657E /* CodeStatement.m in Sources */,
+				EF16ABA61EC955C4007F668A /* ESClassInfo.m in Sources */,
+				EFD482971EC981A0007B493A /* Until.m in Sources */,
+				EF16ABAA1EC955DE007F668A /* JsonToPropertyStatement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,17 +384,6 @@
 			targetProxy = EFCAF7B51D8FED6500B1657E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EFCAF79A1D8FED5400B1657E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EFCAF79B1D8FED5400B1657E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EFCAF79E1D8FED5400B1657E /* Debug */ = {
@@ -435,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V2Q2J8778N;
@@ -442,6 +497,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -449,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V2Q2J8778N;
@@ -456,6 +515,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -466,6 +527,7 @@
 				CODE_SIGN_ENTITLEMENTS = MyPlugin/MyPlugin.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = V2Q2J8778N;
 				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
@@ -490,6 +552,7 @@
 				CODE_SIGN_ENTITLEMENTS = MyPlugin/MyPlugin.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = V2Q2J8778N;
 				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
