@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EFCAF78B1D8FED5400B1657E"
-               BuildableName = "MyMacPlugin.app"
+               BuildableName = "XCode&#x63d2;&#x4ef6;.app"
                BlueprintName = "MyMacPlugin"
                ReferencedContainer = "container:MyMacPlugin.xcodeproj">
             </BuildableReference>
@@ -28,12 +28,22 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EF2732DC1ECD601C00DFC250"
+               BuildableName = "MyMacPluginTests.xctest"
+               BlueprintName = "MyMacPluginTests"
+               ReferencedContainer = "container:MyMacPlugin.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFCAF78B1D8FED5400B1657E"
-            BuildableName = "MyMacPlugin.app"
+            BuildableName = "XCode&#x63d2;&#x4ef6;.app"
             BlueprintName = "MyMacPlugin"
             ReferencedContainer = "container:MyMacPlugin.xcodeproj">
          </BuildableReference>
@@ -56,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFCAF78B1D8FED5400B1657E"
-            BuildableName = "MyMacPlugin.app"
+            BuildableName = "XCode&#x63d2;&#x4ef6;.app"
             BlueprintName = "MyMacPlugin"
             ReferencedContainer = "container:MyMacPlugin.xcodeproj">
          </BuildableReference>
@@ -75,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFCAF78B1D8FED5400B1657E"
-            BuildableName = "MyMacPlugin.app"
+            BuildableName = "XCode&#x63d2;&#x4ef6;.app"
             BlueprintName = "MyMacPlugin"
             ReferencedContainer = "container:MyMacPlugin.xcodeproj">
          </BuildableReference>

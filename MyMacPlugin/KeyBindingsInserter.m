@@ -35,7 +35,11 @@
         vanillaPlistPath = [[NSBundle mainBundle] pathForResource:@"yingguqing" ofType:@"plist"];
         KeyBindArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UserKeyBindings" ofType:@"plist"]];
         for (NSDictionary *item in KeyBindArray.objectEnumerator) {
-            [item setValue:[NSString stringWithFormat:@"%@%@",BaseCommandID,item[CommandID]] forKey:CommandID];
+            NSString *comId = item[CommandID];
+            if (![comId hasPrefix:BaseCommandID]) {
+                NSString *newComId = [NSString stringWithFormat:@"%@%@",BaseCommandID,comId];
+                [item setValue:newComId forKey:CommandID];
+            }
         }
         [self deleteAllOtherKey];
     }

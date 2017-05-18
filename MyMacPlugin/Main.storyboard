@@ -12,9 +12,9 @@
                 <application id="7A0-cY-Ivy" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="Wi2-Q5-1zc">
                         <items>
-                            <menuItem title="MyMacPlugin" id="vnH-xd-CLD">
+                            <menuItem title="XCode插件" id="vnH-xd-CLD">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="MyMacPlugin" systemMenu="apple" id="ft1-SH-ZRE">
+                                <menu key="submenu" title="XCode插件" systemMenu="apple" id="ft1-SH-ZRE">
                                     <items>
                                         <menuItem title="退出" keyEquivalent="q" id="iTT-pI-siu"/>
                                     </items>
@@ -22,7 +22,11 @@
                             </menuItem>
                         </items>
                     </menu>
+                    <connections>
+                        <outlet property="delegate" destination="izh-ko-dm1" id="diw-kI-Kky"/>
+                    </connections>
                 </application>
+                <customObject id="izh-ko-dm1" customClass="AppDelegate"/>
                 <customObject id="vIQ-qM-Yja" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>

@@ -12,6 +12,7 @@
 		EF16ABA61EC955C4007F668A /* ESClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16ABA31EC955C4007F668A /* ESClassInfo.m */; };
 		EF16ABA71EC955C4007F668A /* ESJsonFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16ABA51EC955C4007F668A /* ESJsonFormatManager.m */; };
 		EF16ABAA1EC955DE007F668A /* JsonToPropertyStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16ABA91EC955DE007F668A /* JsonToPropertyStatement.m */; };
+		EF2732D81ECD4AFE00DFC250 /* ImportStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2732D71ECD4AFE00DFC250 /* ImportStatement.m */; };
 		EF7E87701ECC1DF800B97EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7E876F1ECC1DF800B97EC4 /* Main.storyboard */; };
 		EF7E87721ECC1E6C00B97EC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7E87711ECC1E6C00B97EC4 /* ViewController.m */; };
 		EF7E87761ECC1EB400B97EC4 /* CodeStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7E87751ECC1EB400B97EC4 /* CodeStatement.m */; };
@@ -62,6 +63,8 @@
 		EF16ABA51EC955C4007F668A /* ESJsonFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESJsonFormatManager.m; sourceTree = "<group>"; };
 		EF16ABA81EC955DE007F668A /* JsonToPropertyStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonToPropertyStatement.h; sourceTree = "<group>"; };
 		EF16ABA91EC955DE007F668A /* JsonToPropertyStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonToPropertyStatement.m; sourceTree = "<group>"; };
+		EF2732D61ECD4AFE00DFC250 /* ImportStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportStatement.h; sourceTree = "<group>"; };
+		EF2732D71ECD4AFE00DFC250 /* ImportStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportStatement.m; sourceTree = "<group>"; };
 		EF53F4B61D90EADC00451D6C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		EF53F93B1D90F44C00451D6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EF7E876F1ECC1DF800B97EC4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +136,15 @@
 			path = Json2PropertyExtension;
 			sourceTree = "<group>";
 		};
+		EF2732D51ECD4ADC00DFC250 /* ImportStatement */ = {
+			isa = PBXGroup;
+			children = (
+				EF2732D61ECD4AFE00DFC250 /* ImportStatement.h */,
+				EF2732D71ECD4AFE00DFC250 /* ImportStatement.m */,
+			);
+			path = ImportStatement;
+			sourceTree = "<group>";
+		};
 		EFCAF7831D8FED5400B1657E = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +208,7 @@
 				EF16ABA01EC955C4007F668A /* JsonToProperty */,
 				EFD482981EC981C5007B493A /* CodeStatement */,
 				EFD4829C1EC981E0007B493A /* InitWithJsonStatement */,
+				EF2732D51ECD4ADC00DFC250 /* ImportStatement */,
 				EFCAF7AE1D8FED6500B1657E /* SourceEditorExtension.h */,
 				EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */,
 				EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */,
@@ -364,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2732D81ECD4AFE00DFC250 /* ImportStatement.m in Sources */,
 				EF16ABA71EC955C4007F668A /* ESJsonFormatManager.m in Sources */,
 				EFD4829F1EC9829E007B493A /* InitWithJsonStatement.m in Sources */,
 				EF7E87761ECC1EB400B97EC4 /* CodeStatement.m in Sources */,
@@ -496,7 +510,7 @@
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "XCode插件";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -514,7 +528,7 @@
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "XCode插件";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

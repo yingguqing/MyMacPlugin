@@ -12,6 +12,7 @@
 #import "JsonToPropertyStatement.h"
 #import "Until.h"
 #import "InitWithJsonStatement.h"
+#import "ImportStatement.h"
 
 
 @interface SourceEditorCommand ()
@@ -49,6 +50,8 @@
         [JsonToPropertyStatement statementJsonToProperty:invocation];
     } else if ([identifier hasSuffix:@"UserInitWithJson"]) {// 自动生成创建和解析方法
         [InitWithJsonStatement statementInitWithJson:invocation];
+    } else if ([identifier hasSuffix:@"import"]) {// 导入头文件
+        [ImportStatement execute:invocation];
     }
     completionHandler(nil);
 }
