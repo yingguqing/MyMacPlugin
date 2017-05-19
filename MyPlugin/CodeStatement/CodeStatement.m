@@ -7,30 +7,9 @@
 //
 
 #import "CodeStatement.h"
+#import "Until.h"
 
 @implementation CodeStatement
-
-#pragma mark - 删除文字前面的空格
-+ (NSString *)deleteFirstSpace:(NSString *)oldString {
-	if ((oldString == nil) || (oldString.length == 0)) {
-		return @"";
-	}
-	NSString *newString = oldString;
-
-	while (newString.length > 0) {
-		if ([newString hasPrefix:@" "]) {
-			if (newString.length > 1) {
-				newString = [newString substringFromIndex:1];
-			} else {
-				newString = @"";
-			}
-		} else {
-			break;
-		}
-	}
-
-	return newString;
-}
 
 #pragma mark - 使用// 注释代码
 + (void)statementCommand:(XCSourceEditorCommandInvocation *)invocation {
@@ -41,7 +20,7 @@
 		BOOL isAdd = NO;
 
 		for (NSInteger index = startLine; index <= endLine; index++) {
-			NSString *line = [self deleteFirstSpace:invocation.buffer.lines[index]];
+			NSString *line = [Until deleteFirstSpace:invocation.buffer.lines[index]];
 
 			// 去掉了顶头的所有空格
 			if ((line == nil) || (line.length == 0) || ![line hasPrefix:@"//"]) {
@@ -100,7 +79,7 @@
         BOOL valid = NO;
         BOOL needUp = YES;//需要向上检索
         for (NSInteger index = startLine; index < linecount ;index ++){
-            NSString *line = [self deleteFirstSpace:invocation.buffer.lines[index]];
+            NSString *line = [Until deleteFirstSpace:invocation.buffer.lines[index]];
             if (line != nil && line.length > 0 && ![line isEqualToString:@"\n"]) {
                 //方法名称结束
                 valid = ([line rangeOfString:@"{"].length > 0 || [line rangeOfString:@";"].length > 0);
@@ -125,7 +104,7 @@
         if (needUp){
             if (startLine > 0) {//没有找到方法的开始位置
                 for (NSInteger index = startLine - 1 ; index > 0 ;index --){
-                    NSString *line = [self deleteFirstSpace:invocation.buffer.lines[index]];
+                    NSString *line = [Until deleteFirstSpace:invocation.buffer.lines[index]];
                     if (line != nil && line.length > 0) {
                         if ([line rangeOfString:@"{"].length > 0 || [line rangeOfString:@";"].length > 0) {
                             //方法名称结束

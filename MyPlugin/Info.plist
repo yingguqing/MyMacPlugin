@@ -132,6 +132,14 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).JavaToObjectC</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Java属性转成OC属性</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
 					<string>$(PRODUCT_BUNDLE_IDENTIFIER).UppercaseString</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>选中内容大写</string>

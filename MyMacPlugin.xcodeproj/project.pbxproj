@@ -26,6 +26,7 @@
 		EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */; };
 		EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */; };
 		EFCAF7B71D8FED6500B1657E /* MyPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFD2B7B81ECEDA2C003957BD /* JavaToObjectCStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD2B7B71ECEDA2C003957BD /* JavaToObjectCStatement.m */; };
 		EFD482971EC981A0007B493A /* Until.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD482961EC981A0007B493A /* Until.m */; };
 		EFD4829F1EC9829E007B493A /* InitWithJsonStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD4829E1EC9829E007B493A /* InitWithJsonStatement.m */; };
 /* End PBXBuildFile section */
@@ -76,7 +77,7 @@
 		EF7E87881ECC2F8000B97EC4 /* KeyBindingsInserter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBindingsInserter.m; sourceTree = "<group>"; };
 		EF7E878A1ECC2FFF00B97EC4 /* UserKeyBindings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserKeyBindings.plist; sourceTree = "<group>"; };
 		EF7E878B1ECC2FFF00B97EC4 /* yingguqing.idekeybindings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = yingguqing.idekeybindings; sourceTree = "<group>"; };
-		EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMacPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCAF78C1D8FED5400B1657E /* MyMacPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MyMacPlugin.app; path = "XCode插件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCAF78F1D8FED5400B1657E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCAF7901D8FED5400B1657E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EFCAF7931D8FED5400B1657E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +91,8 @@
 		EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
 		EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
 		EFCAF7B41D8FED6500B1657E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD2B7B61ECEDA2C003957BD /* JavaToObjectCStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaToObjectCStatement.h; sourceTree = "<group>"; };
+		EFD2B7B71ECEDA2C003957BD /* JavaToObjectCStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaToObjectCStatement.m; sourceTree = "<group>"; };
 		EFD482951EC981A0007B493A /* Until.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Until.h; sourceTree = "<group>"; };
 		EFD482961EC981A0007B493A /* Until.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Until.m; sourceTree = "<group>"; };
 		EFD4829D1EC9829E007B493A /* InitWithJsonStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitWithJsonStatement.h; sourceTree = "<group>"; };
@@ -205,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD482941EC981A0007B493A /* Until */,
+				EFD2B7B51ECEDA1B003957BD /* JavaToObjectC */,
 				EF16ABA01EC955C4007F668A /* JsonToProperty */,
 				EFD482981EC981C5007B493A /* CodeStatement */,
 				EFD4829C1EC981E0007B493A /* InitWithJsonStatement */,
@@ -227,6 +231,15 @@
 				EFCAF7B41D8FED6500B1657E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFD2B7B51ECEDA1B003957BD /* JavaToObjectC */ = {
+			isa = PBXGroup;
+			children = (
+				EFD2B7B61ECEDA2C003957BD /* JavaToObjectCStatement.h */,
+				EFD2B7B71ECEDA2C003957BD /* JavaToObjectCStatement.m */,
+			);
+			path = JavaToObjectC;
 			sourceTree = "<group>";
 		};
 		EFD482941EC981A0007B493A /* Until */ = {
@@ -378,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2732D81ECD4AFE00DFC250 /* ImportStatement.m in Sources */,
+				EFD2B7B81ECEDA2C003957BD /* JavaToObjectCStatement.m in Sources */,
 				EF16ABA71EC955C4007F668A /* ESJsonFormatManager.m in Sources */,
 				EFD4829F1EC9829E007B493A /* InitWithJsonStatement.m in Sources */,
 				EF7E87761ECC1EB400B97EC4 /* CodeStatement.m in Sources */,

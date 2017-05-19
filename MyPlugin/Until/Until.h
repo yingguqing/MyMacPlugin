@@ -10,4 +10,7 @@
 
 @interface Until : NSObject
 + (void)showMsg:(NSString *)msg;
++ (BOOL)isWhitespaceOrNewline:(NSString *)str;
++ (NSString *)deleteFirstSpace:(NSString *)oldString;
++ (NSString *)nameForNo_WithName:(NSString *)name;
 @end

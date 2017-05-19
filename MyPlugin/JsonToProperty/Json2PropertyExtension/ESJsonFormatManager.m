@@ -8,6 +8,7 @@
 
 #import "ESJsonFormatManager.h"
 #import "ESClassInfo.h"
+#import "Until.h"
 
 #define ESUppercaseKeyWords @[@"id"]
 
@@ -42,18 +43,26 @@
 + (NSString *)formatObjcWithKey:(NSString *)key value:(NSObject *)value classInfo:(ESClassInfo *)classInfo {
 	NSString *qualifierStr = @"copy";
 	NSString *typeStr = @"NSString";
+    NSString *name = nil;
+    NSString *endString = @"";
 
 	// 判断大小写
 	if ([ESUppercaseKeyWords containsObject:key] /*&& [ESJsonFormatSetting defaultSetting].uppercaseKeyWordForId*/) {
 		key = [key uppercaseString];
 	}
+    name = key;
+    NSString *n = [Until nameForNo_WithName:key];
+    if (n) {
+        name = n;
+        endString = [NSString stringWithFormat:@"//[%@]",key];
+    }
 	if ([value isKindOfClass:[NSString class]]) {
-		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;", qualifierStr, typeStr, key];
+		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;%@", qualifierStr, typeStr, name,endString];
 	} else if ([value isKindOfClass:[@(YES)class]]) {
 		// the 'NSCFBoolean' is private subclass of 'NSNumber'
 		qualifierStr = @"assign";
 		typeStr = @"BOOL";
-		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ %@;", qualifierStr, typeStr, key];
+		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ %@;%@", qualifierStr, typeStr, name,endString];
 	} else if ([value isKindOfClass:[NSNumber class]]) {
 		qualifierStr = @"assign";
 		NSString *valueStr = [NSString stringWithFormat:@"%@", value];
@@ -67,7 +76,7 @@
 				typeStr = @"long long";
 			}
 		}
-		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ %@;", qualifierStr, typeStr, key];
+		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ %@;%@", qualifierStr, typeStr, name,endString];
 	} else if ([value isKindOfClass:[NSArray class]]) {
 		NSArray *array = (NSArray *)value;
 
@@ -86,10 +95,10 @@
 		qualifierStr = @"strong";
 		typeStr = @"NSArray";
 //        if ([ESJsonFormatSetting defaultSetting].useGeneric && [ESUtils isXcode7AndLater]) {
-		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@%@ *%@;", qualifierStr, typeStr, genericTypeStr, key];
+		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@%@ *%@;%@", qualifierStr, typeStr, genericTypeStr, name,endString];
 
 //        }
-		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;", qualifierStr, typeStr, key];
+		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;%@", qualifierStr, typeStr, name,endString];
 	} else if ([value isKindOfClass:[NSDictionary class]]) {
 		qualifierStr = @"strong";
 		ESClassInfo *childInfo = classInfo.propertyClassDic[key];
@@ -97,9 +106,9 @@
 		if (!typeStr) {
 			typeStr = [key capitalizedString];
 		}
-		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;", qualifierStr, typeStr, key];
+		return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;%@", qualifierStr, typeStr, name,endString];
 	}
-	return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;", qualifierStr, typeStr, key];
+	return [NSString stringWithFormat:@"@property (nonatomic, %@) %@ *%@;%@", qualifierStr, typeStr, name,endString];
 }
 
 /**

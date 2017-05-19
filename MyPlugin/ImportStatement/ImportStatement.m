@@ -8,6 +8,7 @@
 
 #import "ImportStatement.h"
 #import <AppKit/AppKit.h>
+#import "Until.h"
 
 NSString *const objcImport = @".*#.*(import|include).*[\",<].*[\",>]";
 NSString *const objcModuleImport = @".*@.*(import).*.;";
@@ -56,7 +57,7 @@ static NSRegularExpression *swiftModuleImportRegex;
         if ([self isSwiftSource:invocation]) {
             [invocation.buffer.lines insertObject:@"import <#header#>" atIndex:selectionLine];
         } else {
-            [invocation.buffer.lines insertObject:@"#import <#header#>" atIndex:selectionLine];
+            [invocation.buffer.lines insertObject:@"#import \"<#header#>\"" atIndex:selectionLine];
         }
         return;
     }
@@ -149,7 +150,7 @@ static NSRegularExpression *swiftModuleImportRegex;
             continue;
         }
         lineNumber = index;
-        if ([self isWhitespaceOrNewline:line]) {
+        if ([Until isWhitespaceOrNewline:line]) {
             break;
         }
         index++;
@@ -170,11 +171,5 @@ static NSRegularExpression *swiftModuleImportRegex;
 + (BOOL)canIncludeImportString:(NSString *)importString atLine:(NSInteger)atLine invocation:(XCSourceEditorCommandInvocation *)invocation {
     NSArray *importBufferArray = [invocation.buffer.lines subarrayWithRange:NSMakeRange(0, atLine)];
     return [importBufferArray containsObject:importString] == false;
-}
-
-+ (BOOL)isWhitespaceOrNewline:(NSString *)str {
-    NSString *string = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    return string == nil || string.length == 0;
-    
 }
 @end

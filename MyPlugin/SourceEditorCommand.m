@@ -13,6 +13,7 @@
 #import "Until.h"
 #import "InitWithJsonStatement.h"
 #import "ImportStatement.h"
+#import "JavaToObjectCStatement.h"
 
 
 @interface SourceEditorCommand ()
@@ -52,6 +53,8 @@
         [InitWithJsonStatement statementInitWithJson:invocation];
     } else if ([identifier hasSuffix:@"import"]) {// 导入头文件
         [ImportStatement execute:invocation];
+    } else if ([identifier hasSuffix:@"JavaToObjectC"]) {// Java属性转成OC属性
+        [JavaToObjectCStatement javaToObjectCProperty:invocation];
     }
     completionHandler(nil);
 }
