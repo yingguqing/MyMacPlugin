@@ -3,314 +3,314 @@
 <plist version="1.0">
 <array>
 	<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.CopyLineUp</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>向上复制</string>
-				<key>Keyboard Shortcut</key>
-				<string>~@</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.CopyLineDown</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>向下复制</string>
-				<key>Keyboard Shortcut</key>
-				<string>~@</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.DeleteLine</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>删除当前行</string>
-				<key>Keyboard Shortcut</key>
-				<string>$@D</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.DocumentAdd</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>加注释说明</string>
-				<key>Keyboard Shortcut</key>
-				<string>~@/</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.Command</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>//注释代码</string>
-				<key>Keyboard Shortcut</key>
-				<string>@/</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.FormatCode</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>格式化代码</string>
-				<key>Keyboard Shortcut</key>
-				<string>$@F</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.UpInsertEnter</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>上一行回车</string>
-				<key>Keyboard Shortcut</key>
-				<string>$@
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.CopyLineUp</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>向上复制</string>
+		<key>Keyboard Shortcut</key>
+		<string>~@</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.CopyLineDown</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>向下复制</string>
+		<key>Keyboard Shortcut</key>
+		<string>~@</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.DeleteLine</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>删除当前行</string>
+		<key>Keyboard Shortcut</key>
+		<string>$@D</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.DocumentAdd</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>加注释说明</string>
+		<key>Keyboard Shortcut</key>
+		<string>~@/</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.Command</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>//注释代码</string>
+		<key>Keyboard Shortcut</key>
+		<string>@/</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.FormatCode</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>格式化代码</string>
+		<key>Keyboard Shortcut</key>
+		<string>$@F</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.UpInsertEnter</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>上一行回车</string>
+		<key>Keyboard Shortcut</key>
+		<string>$@
 </string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.DownInsertEnter</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>下一行回车</string>
-				<key>Keyboard Shortcut</key>
-				<string>@
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.DownInsertEnter</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>下一行回车</string>
+		<key>Keyboard Shortcut</key>
+		<string>@
 </string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.AddReleaseToDealloc</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>添加释放到dealloc里</string>
-				<key>Keyboard Shortcut</key>
-				<string>@k</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.JsonToProperty</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>将Json转成h文件里的属性</string>
-				<key>Keyboard Shortcut</key>
-				<string>~@j</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.UserInitWithJson</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>自动生成创建和解析方法</string>
-				<key>Keyboard Shortcut</key>
-				<string>@j</string>
-			</dict>
-            <dict>
-                <key>Action</key>
-                <string>_invokeSourceEditorExtensionCommand:</string>
-                <key>Alternate</key>
-                <string>NO</string>
-                <key>CommandID</key>
-                <string>IDESourceEditorExtension:com.yingguqing.MyMacPlugin.MyPlugin,IDESourceEditorExtensionCommand:com.yingguqing.MyMacPlugin.MyPlugin.import</string>
-                <key>Group</key>
-                <string>Editor Menu for Source Code</string>
-                <key>GroupID</key>
-                <string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-                <key>GroupedAlternate</key>
-                <string>NO</string>
-                <key>Keyboard Shortcut</key>
-                <string>@p</string>
-                <key>Navigation</key>
-                <string>NO</string>
-                <key>Parent Title</key>
-                <string>MyPlugin</string>
-                <key>Title</key>
-                <string>导入头文件</string>
-            </dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.UppercaseString</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>选中内容大写</string>
-				<key>Keyboard Shortcut</key>
-				<string>@y</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>_invokeSourceEditorExtensionCommand:</string>
-				<key>Group</key>
-				<string>Editor Menu for Source Code</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>.lowercaseString</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>MyPlugin</string>
-				<key>GroupID</key>
-				<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>选中内容小写</string>
-				<key>Keyboard Shortcut</key>
-				<string>$@Y</string>
-			</dict>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.AddReleaseToDealloc</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>添加释放到dealloc里</string>
+		<key>Keyboard Shortcut</key>
+		<string>@k</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.JsonToProperty</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>将Json转成h文件里的属性</string>
+		<key>Keyboard Shortcut</key>
+		<string>$@j</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.UserInitWithJson</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>自动生成创建和解析方法</string>
+		<key>Keyboard Shortcut</key>
+		<string>@j</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>IDESourceEditorExtension:com.yingguqing.MyMacPlugin.MyPlugin,IDESourceEditorExtensionCommand:com.yingguqing.MyMacPlugin.MyPlugin.import</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>Keyboard Shortcut</key>
+		<string>@p</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>Title</key>
+		<string>导入头文件</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.UppercaseString</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>选中内容大写</string>
+		<key>Keyboard Shortcut</key>
+		<string>@y</string>
+	</dict>
+	<dict>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.lowercaseString</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>选中内容小写</string>
+		<key>Keyboard Shortcut</key>
+		<string>$@Y</string>
+	</dict>
 </array>
 </plist>

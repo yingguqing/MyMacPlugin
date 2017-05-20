@@ -22,18 +22,71 @@
             jsonString = [NSString stringWithFormat:@"%@%@", jsonString, invocation.buffer.lines[i]];
         }
     }
-    
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *err;
     id dicOrArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
-    if (err) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [Until showMsg:err.localizedDescription];
-        });
-    } else {
-        ESClassInfo *classInfo = [self dealClassNameWithJsonResult:dicOrArray buffer:invocation.buffer];
-        [self outputResult:classInfo buffer:invocation.buffer];
+    if (err) {//如果失败,则看看是不是Key没有加"",加上""再试一次
+        err = nil;
+        NSArray *a = [jsonString componentsSeparatedByString:@","];
+        NSRange range;
+        for (NSString *s in a.objectEnumerator) {
+            NSArray *na = [s componentsSeparatedByString:@":"];
+            if (na && na.count == 2) {
+                NSString *key = [na firstObject];
+                BOOL isChange = false;
+                BOOL isEnd = false;
+                BOOL isStart = false;
+                BOOL lastIsMark = false;
+                NSMutableString *nstr = [NSMutableString string];
+                for(int i=0; i<key.length; i+=range.length) {
+                    range = [key rangeOfComposedCharacterSequenceAtIndex:i];
+                    NSString *s = [key substringWithRange:range];
+                    BOOL isLegitimate = [self islegitimateString:s];
+                    BOOL isMark = [@"\"" isEqualToString:s];
+                    if ((!isStart && !isLegitimate && !isMark) || (isStart && isLegitimate) || (isEnd)) {
+                        [nstr appendString:s];
+                    }
+                    if (!isStart && (isLegitimate || isMark)) {
+                        isChange = true;
+                        [nstr appendString:@"\""];
+                        if (!isMark) [nstr appendString:s];
+                        isStart = true;
+                    } else if (isStart && !isEnd && !isLegitimate) {
+                        lastIsMark = true;
+                        isChange = true;
+                        [nstr appendString:@"\""];
+                        if (!isMark) [nstr appendString:s];
+                        isEnd = true;
+                    }
+                }
+                if (!lastIsMark) [nstr appendString:@"\""];
+                [nstr appendFormat:@":%@",[na lastObject]];
+                if (isChange) {
+                    jsonString = [jsonString stringByReplacingOccurrencesOfString:s withString:nstr];
+                }
+            } else {
+                return;
+            }
+        }
+        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        dicOrArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+        if (err) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [Until showMsg:err.localizedDescription];
+            });
+            return;
+        }
     }
+    ESClassInfo *classInfo = [self dealClassNameWithJsonResult:dicOrArray buffer:invocation.buffer];
+    [self outputResult:classInfo buffer:invocation.buffer];
+}
+
++ (BOOL)islegitimateString:(NSString *)s {
+    if ([@"\n" isEqualToString:s]) return false;
+    NSString * regex = @"\\w";
+    NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [pred evaluateWithObject:s];
 }
 
 + (BOOL)isSwift:(XCSourceTextBuffer *)buffer {
