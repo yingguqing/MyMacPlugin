@@ -89,5 +89,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPlugin/JavaToObjectC/JavaToObjectCStatement.m"
+            timestampString = "517117282.526153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "+javaToObjectCProperty:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[JavaToObjectCStatement javaToObjectCProperty:]"
+                  moduleName = "MyPlugin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yingguqing/Documents/my/ios/New_Ios/MyMacPlugin/MyPlugin/JavaToObjectC/JavaToObjectCStatement.m"
+                  timestampString = "517117304.152152"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "794">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[JavaToObjectCStatement javaToObjectCProperty:]"
+                  moduleName = "MyPlugin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yingguqing/Documents/my/ios/New_Ios/MyMacPlugin/MyPlugin/JavaToObjectC/JavaToObjectCStatement.m"
+                  timestampString = "517117304.153479"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "816">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

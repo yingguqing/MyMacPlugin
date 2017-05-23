@@ -472,7 +472,7 @@
         if (deallocIndex == -1) {
             NSUInteger count = invocation.buffer.lines.count;
             //获取@implementation的位置
-            NSUInteger startIndex = [self findStringIndex:@"@implementation" endString:@"@interface" findRang:NSMakeRange(range.start.line, count) allString:invocation.buffer.lines isOrder:false];
+            NSUInteger startIndex = [Until findStringIndex:@"@implementation" endString:@"@interface" findRang:NSMakeRange(range.start.line, count) allString:invocation.buffer.lines isOrder:false];
             NSUInteger endIndex = -1;
             if (startIndex >= count) {//在查找implementation时,遇到interface
                 NSString *string = invocation.buffer.lines[startIndex -count];
@@ -485,9 +485,9 @@
                     name = [string substringWithRange:NSMakeRange(r.location + r.length, endR.location-r.location-r.length)];
                     name = [name stringByReplacingOccurrencesOfString:@" " withString:@""];
                     // 查找implementation+实体名称
-                    startIndex = [self findStringIndex:[NSString stringWithFormat:@"@implementation %@",name] endString:nil findRang:NSMakeRange(0, count) allString:invocation.buffer.lines isOrder:true];
+                    startIndex = [Until findStringIndex:[NSString stringWithFormat:@"@implementation %@",name] endString:nil findRang:NSMakeRange(0, count) allString:invocation.buffer.lines isOrder:true];
                     if (startIndex != -1) {//如果存在,则查找end的位置
-                        endIndex = [self findStringIndex:@"@end" endString:nil findRang:NSMakeRange(startIndex, count - range.start.line) allString:invocation.buffer.lines isOrder:true];
+                        endIndex = [Until findStringIndex:@"@end" endString:nil findRang:NSMakeRange(startIndex, count - range.start.line) allString:invocation.buffer.lines isOrder:true];
                     }
                 } else {//不存在实体名称时
                     startIndex = -1;
@@ -495,8 +495,8 @@
             }
             
             if (startIndex == -1) {
-                startIndex = [self findStringIndex:@"@implementation" endString:nil findRang:NSMakeRange(range.start.line, count) allString:invocation.buffer.lines isOrder:true];
-                endIndex = [self findStringIndex:@"@end" endString:nil findRang:NSMakeRange(range.start.line, count - range.start.line) allString:invocation.buffer.lines isOrder:true];
+                startIndex = [Until findStringIndex:@"@implementation" endString:nil findRang:NSMakeRange(range.start.line, count) allString:invocation.buffer.lines isOrder:true];
+                endIndex = [Until findStringIndex:@"@end" endString:nil findRang:NSMakeRange(range.start.line, count - range.start.line) allString:invocation.buffer.lines isOrder:true];
             }
             
             //获取dealloc的位置
@@ -599,37 +599,6 @@
         }
     }
     return variableArray;
-}
-
-/**
- *  @brief  查找文字所在行
- *
- *  @param searchString 查找文字
- *  @param endString    结束文字(可以为空)
- *  @param range        查找范围
- *  @param allString    所有文字(NSArray<NSString *>类型)
- *  @param isOrder      true为顺序查找,false为逆序查找
- *
- *  @return  目标文字所在行,不存在是返回-1,如果在范围内遇到结束文字,文字所以行就加上总行数
- */ 
-+ (NSInteger)findStringIndex:(NSString *)searchString endString:(NSString *)endString findRang:(NSRange)range allString:(NSArray<NSString *> *)allString isOrder:(BOOL)isOrder {
-    if (!searchString || searchString.length == 0 || !allString || allString.count == 0) return -1;
-    NSUInteger count = allString.count;
-    if (count > range.location + range.length) count = range.location + range.length;
-    if (isOrder) {
-        for (NSUInteger i = range.location; i < count; i++) {
-            NSString *string = allString[i];
-            if ([string hasPrefix:searchString]) return i;
-            if (endString && endString.length > 0 && [string hasPrefix:endString]) return count + i;
-        }
-    } else {
-        for (NSInteger i = range.location; i >= 0; i--) {
-            NSString *string = allString[i];
-            if ([string hasPrefix:searchString]) return i;
-            if (endString && endString.length > 0 && [string hasPrefix:endString]) return count + i;
-        }
-    }
-    return -1;
 }
 
 

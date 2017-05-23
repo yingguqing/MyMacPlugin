@@ -222,7 +222,7 @@
 		<key>Title</key>
 		<string>将Json转成h文件里的属性</string>
 		<key>Keyboard Shortcut</key>
-		<string>$@j</string>
+		<string>$@l</string>
 	</dict>
 	<dict>
 		<key>Action</key>

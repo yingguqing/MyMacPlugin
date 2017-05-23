@@ -59,7 +59,7 @@
                     NSRange zxRange = [insrtString rangeOfString:@"//"];
                     NSString *s = nil;
                     if (zxRange.location == NSNotFound) {
-                        zxRange = [nStr rangeOfString:@";"];
+                        zxRange = [insrtString rangeOfString:@";"];
                         s= [NSString stringWithFormat:@";//[%@]",saveName];
                     } else {
                         s = [NSString stringWithFormat:@"//[%@]",saveName];

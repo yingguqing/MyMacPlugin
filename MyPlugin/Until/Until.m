@@ -68,4 +68,35 @@
     return nil;
 }
 
+/**
+ *  @brief  查找文字所在行
+ *
+ *  @param searchString 查找文字
+ *  @param endString    结束文字(可以为空)
+ *  @param range        查找范围
+ *  @param allString    所有文字(NSArray<NSString *>类型)
+ *  @param isOrder      true为顺序查找,false为逆序查找
+ *
+ *  @return  目标文字所在行,不存在是返回-1,如果在范围内遇到结束文字,文字所以行就加上总行数
+ */
++ (NSInteger)findStringIndex:(NSString *)searchString endString:(NSString *)endString findRang:(NSRange)range allString:(NSArray<NSString *> *)allString isOrder:(BOOL)isOrder {
+    if (!searchString || searchString.length == 0 || !allString || allString.count == 0) return -1;
+    NSUInteger count = allString.count;
+    if (count > range.location + range.length) count = range.location + range.length;
+    if (isOrder) {
+        for (NSUInteger i = range.location; i < count; i++) {
+            NSString *string = allString[i];
+            if ([string hasPrefix:searchString]) return i;
+            if (endString && endString.length > 0 && [string hasPrefix:endString]) return count + i;
+        }
+    } else {
+        for (NSInteger i = range.location; i >= 0; i--) {
+            NSString *string = allString[i];
+            if ([string hasPrefix:searchString]) return i;
+            if (endString && endString.length > 0 && [string hasPrefix:endString]) return count + i;
+        }
+    }
+    return -1;
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "InitWithJsonStatement.h"
+#import "Until.h"
 
 @implementation InitWithJsonStatement
 
@@ -93,7 +94,12 @@
         }        
     }
     [initString appendString:@"    }\n    return self;\n}\n\n\n"];
-    [invocation.buffer.lines addObject:initString];
+    NSInteger index = [Until findStringIndex:@"@end" endString:nil findRang:NSMakeRange(range.start.line, invocation.buffer.lines.count - range.start.line) allString:invocation.buffer.lines isOrder:true];
+    if (index >= 0) {
+        [invocation.buffer.lines insertObject:initString atIndex:index];
+    } else {
+        [invocation.buffer.lines addObject:initString];
+    }
 }
 
 + (NSString *)clearWhitespace:(NSString *)str {
