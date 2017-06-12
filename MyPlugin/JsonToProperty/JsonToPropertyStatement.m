@@ -29,11 +29,11 @@
     if (err) {//如果失败,则看看是不是Key没有加"",加上""再试一次
         err = nil;
         NSArray *a = [jsonString componentsSeparatedByString:@","];
-        NSRange range;
         for (NSString *s in a.objectEnumerator) {
-            NSArray *na = [s componentsSeparatedByString:@":"];
-            if (na && na.count == 2) {
-                NSString *key = [na firstObject];
+            NSRange range = [s rangeOfString:@":"];
+            if (range.location != NSNotFound) {
+                NSString *key = [s substringToIndex:range.location];
+                NSString *value = [s substringFromIndex:range.location + range.length];
                 BOOL isChange = false;
                 BOOL isEnd = false;
                 BOOL isStart = false;
@@ -61,7 +61,7 @@
                     }
                 }
                 if (!lastIsMark) [nstr appendString:@"\""];
-                [nstr appendFormat:@":%@",[na lastObject]];
+                [nstr appendFormat:@":%@",value];
                 if (isChange) {
                     jsonString = [jsonString stringByReplacingOccurrencesOfString:s withString:nstr];
                 }
@@ -82,6 +82,7 @@
     [self outputResult:classInfo buffer:invocation.buffer];
 }
 
+#pragma mark - 判断一个字符是否是合法
 + (BOOL)islegitimateString:(NSString *)s {
     if ([@"\n" isEqualToString:s]) return false;
     NSString * regex = @"\\w";

@@ -66,6 +66,7 @@
                 NSString *name = a[0];
                 NSString *type = a[1];
                 NSString *parserString = nil;
+                BOOL isNeedCopy = false;
                 if ([@"NSUInteger" isEqualToString:type] || [@"NSInteger" isEqualToString:type]) {
                     parserString = @"integerParser";
                 } else if ([@"int" isEqualToString:type]) {
@@ -76,6 +77,7 @@
                     parserString = @"doubleParser";
                 } else if ([@"NSString" isEqualToString:type]) {
                     parserString = @"stringParser";
+                    isNeedCopy = true;
                 } else if ([@"BOOL" isEqualToString:type]) {
                     parserString = @"boolParser";
                 } else if ([@"long" isEqualToString:type]) {
@@ -88,7 +90,11 @@
                     if ([nameDic[str] isKindOfClass:[NSString class]]) {
                         parserName = (NSString *)nameDic[str];
                     }
-                    [initString appendFormat:@"        self.%@ = [self %@:@\"%@\" json:json];\n",name,parserString,parserName];
+                    if (isNeedCopy) {
+                        [initString appendFormat:@"        _%@ = [[self %@:@\"%@\" json:json] copy];\n",name,parserString,parserName];
+                    } else {
+                        [initString appendFormat:@"        _%@ = [self %@:@\"%@\" json:json];\n",name,parserString,parserName];
+                    }
                 }
             }
         }        
