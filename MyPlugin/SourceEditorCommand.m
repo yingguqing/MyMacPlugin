@@ -14,7 +14,7 @@
 #import "InitWithJsonStatement.h"
 #import "ImportStatement.h"
 #import "JavaToObjectCStatement.h"
-
+#import "MyPlugin-Swift.h"
 
 @interface SourceEditorCommand ()
 @property (nonatomic, strong) XCSourceTextBuffer *buffer;
@@ -24,7 +24,7 @@
 @implementation SourceEditorCommand
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
-    NSString *identifier = invocation.commandIdentifier;    
+    NSString *identifier = invocation.commandIdentifier;
     if ([identifier hasSuffix:@"CopyLineUp"]) {//向上复制选中代码
         [CodeStatement statementCopyLine:invocation isUp:true];
     } else if ([identifier hasSuffix:@"CopyLineDown"]) {//向下复制选中代码
