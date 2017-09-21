@@ -350,7 +350,7 @@
 #pragma mark - 格式化输入文字
 + (NSArray *)formatCodeWithString:(NSString *)string {
 	if (!string || (string.length == 0)) return nil;
-
+    
 	NSPipe *errorPipe = [NSPipe new];
 	NSPipe *outputPipe = [NSPipe new];
 
