@@ -14,15 +14,16 @@
 #define KeyBindings @"Key Bindings"
 #define CommandID @"CommandID"
 #define KeyboardShortcut @"Keyboard Shortcut"
-#define BaseCommandID @"IDESourceEditorExtension:com.yingguqing.MyMacPlugin.MyPlugin,IDESourceEditorExtensionCommand:com.yingguqing.MyMacPlugin.MyPlugin"
+// 修改包名，必须对应修改这里
+#define BaseCommandID @"IDESourceEditorExtension:com.49.XcodePlugin.MyPlugin,IDESourceEditorExtensionCommand:com.49.XcodePlugin.MyPlugin"
 #define BindingAlreadySet @"快捷键设置已存在,请在Xcode里查看."
 #define BindingIsSet @"快捷键设置成功,请在Xcode里使用."
 #define CouldNotInstall @"快捷键设置失败.请在系统设置里再试一次."
 
 @interface KeyBindingsInserter() {
     NSString *vanillaPlistPath;
-    NSArray *KeyBindArray;
 }
+
 
 @end
 
@@ -32,9 +33,9 @@
     self = [super init];
     if (self) {
         self.path = path;
-        vanillaPlistPath = [[NSBundle mainBundle] pathForResource:@"yingguqing" ofType:@"plist"];
-        KeyBindArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UserKeyBindings" ofType:@"plist"]];
-        for (NSDictionary *item in KeyBindArray.objectEnumerator) {
+        vanillaPlistPath = [[NSBundle mainBundle] pathForResource:@"yingguqing" ofType:@"idekeybindings"];
+        self.KeyBindArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UserKeyBindings" ofType:@"plist"]];
+        for (NSDictionary *item in _KeyBindArray.objectEnumerator) {
             NSString *comId = item[CommandID];
             if (![comId hasPrefix:BaseCommandID]) {
                 NSString *newComId = [NSString stringWithFormat:@"%@%@",BaseCommandID,comId];
@@ -48,10 +49,12 @@
 
 - (void)insertBindings {
     if (![[NSFileManager defaultManager] fileExistsAtPath:self.path]) {
-        [self installVanillaPlist];//不存在文件,就先复制一个
+        if (![self installVanillaPlist]) {//不存在文件,就先复制一个
+            return;//复制失败不操作
+        }
     }
     BOOL success = false;
-    for (NSDictionary *item in KeyBindArray.objectEnumerator) {
+    for (NSDictionary *item in _KeyBindArray.objectEnumerator) {
         success = [self insertVanillaPlistWith:item];
         if (!success) break;
     }
@@ -72,7 +75,13 @@
         if (comId && comId.length > 0) {
             if (![comId hasPrefix:@"Xcode"]) {
                 [delArray addObject:item];
+                continue;
             }
+        }
+        NSString *keyboardShortcut = item[KeyboardShortcut];
+        if (keyboardShortcut == nil || keyboardShortcut.length == 0) {
+            [delArray addObject:item];
+            continue;
         }
     }
     [bindings removeObjectsInArray:delArray];
@@ -80,7 +89,9 @@
 }
 
 - (BOOL)insertVanillaPlistWith:(NSDictionary *)newKey {
-    if (newKey.count == 0 || KeyBindArray.count == 0) return false;
+    if (newKey.count == 0 || _KeyBindArray.count == 0) return false;
+    // enable 为false的时候，不加入快捷方式
+    if ([newKey[@"Enable"] boolValue] == false) return true;
     NSMutableDictionary *existingPlist = [NSMutableDictionary dictionaryWithContentsOfFile:_path];
     if (!existingPlist) return false;
     NSMutableArray *bindings = [self extractBindingsFrom:existingPlist];
@@ -98,19 +109,10 @@
             }
             [bindings removeObjectAtIndex:bindingPosition];
             [bindings insertObject:newKey atIndex:bindingPosition];
-            /*if let binding = bindings[bindingPosition] as? NSDictionary,
-                isBindingSet(in: binding, keyboardShortcut: KeyboardShortcut) {
-                    //present(message: Messages.BindingAlreadySet, style: .informational)
-                    return true
-                } else {
-                    bindings.removeObject(at: bindingPosition)
-                    bindings.insert(newKey, at: bindingPosition)
-                }*/
         } else {
             [bindings insertObject:newKey atIndex:0];
         }
         [existingPlist writeToFile:_path atomically:true];
-        //present(message: Messages.BindingIsSet, style: .informational)
         return true;
     } else {
         return false;
@@ -146,7 +148,7 @@
     return false;
 }
 
-- (void)installVanillaPlist {
+- (BOOL)installVanillaPlist {
     NSString *keyBindingsFolder = [[NSString stringWithFormat:@"%@",_path] stringByDeletingLastPathComponent];
     if (![[NSFileManager defaultManager] fileExistsAtPath:keyBindingsFolder]) {
         NSError *error = nil;
@@ -155,11 +157,10 @@
     }
     NSError *error = nil;
     BOOL success = [[NSFileManager defaultManager] copyItemAtPath:vanillaPlistPath toPath:_path error:&error];
-    if (success) {
-        [self present:BindingIsSet style:NSAlertStyleInformational];
-    } else {
+    if (!success) {
         [self present:error];
     }
+    return success;
 }
 
 - (void)present:(NSString *)message style:(NSAlertStyle)style {

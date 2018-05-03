@@ -10,6 +10,7 @@
 
 @interface KeyBindingsInserter : NSObject 
 @property (strong) NSString *path;
+@property (strong, nonatomic) NSArray *KeyBindArray;
 - (instancetype)initWithPath:(NSString *)path;
 - (void)insertBindings;
 - (void)deleteAllOtherKey;

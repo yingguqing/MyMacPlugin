@@ -15,6 +15,7 @@
 #import "ImportStatement.h"
 #import "JavaToObjectCStatement.h"
 #import "MyPlugin-Swift.h"
+#import "LongCommandStatement.h"
 
 @interface SourceEditorCommand ()
 @property (nonatomic, strong) XCSourceTextBuffer *buffer;
@@ -25,6 +26,9 @@
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
     NSString *identifier = invocation.commandIdentifier;
+    if (identifier == nil || identifier.length == 0) {
+        printf("identifier为空");
+    }
     if ([identifier hasSuffix:@"CopyLineUp"]) {//向上复制选中代码
         [CodeStatement statementCopyLine:invocation isUp:true];
     } else if ([identifier hasSuffix:@"CopyLineDown"]) {//向下复制选中代码
@@ -40,7 +44,12 @@
     } else if ([identifier hasSuffix:@"Command"]) {// 使用//注释代码
         [CodeStatement statementCommand:invocation];
     } else if ([identifier hasSuffix:@"FormatCode"]) {// 格式化代码
-        [CodeStatement statementFormatCode:invocation];
+        // swift代码格式化
+        if ([@[@"public.swift-source", @"com.apple.dt.playground"] containsObject:invocation.buffer.contentUTI]) {
+            [FormatSwiftCodeStatement formatSwiftCodeStatementWithInvocation:invocation completionHandler:completionHandler];
+        } else {//OC代码格式化
+            [CodeStatement statementFormatCode:invocation];
+        }
     } else if ([identifier hasSuffix:@"UpInsertEnter"]) {// 向上一行添加一个回车
         [CodeStatement statementInsertEnter:invocation isUp:true];
     } else if ([identifier hasSuffix:@"DownInsertEnter"]) {// 向下一行添加一个回车
@@ -55,6 +64,8 @@
         [ImportStatement execute:invocation];
     } else if ([identifier hasSuffix:@"JavaToObjectC"]) {// Java属性转成OC属性
         [JavaToObjectCStatement javaToObjectCProperty:invocation];
+    } else if ([identifier hasSuffix:@"JavaToObjectC"]) {// /**/注释代码
+        [LongCommandStatement longCommand:invocation];
     }
     completionHandler(nil);
 }

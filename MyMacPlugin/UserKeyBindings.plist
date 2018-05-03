@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -23,8 +25,12 @@
 		<string>向上复制</string>
 		<key>Keyboard Shortcut</key>
 		<string>~@</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⌥ + ↑</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -45,8 +51,12 @@
 		<string>向下复制</string>
 		<key>Keyboard Shortcut</key>
 		<string>~@</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⌥ + ↓</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -67,8 +77,12 @@
 		<string>删除当前行</string>
 		<key>Keyboard Shortcut</key>
 		<string>$@D</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⇧ + D</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -89,8 +103,12 @@
 		<string>加注释说明</string>
 		<key>Keyboard Shortcut</key>
 		<string>~@/</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⌥ + /</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -111,8 +129,12 @@
 		<string>//注释代码</string>
 		<key>Keyboard Shortcut</key>
 		<string>@/</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + /</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -133,8 +155,12 @@
 		<string>格式化代码</string>
 		<key>Keyboard Shortcut</key>
 		<string>$@F</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⇧ + F</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -156,8 +182,12 @@
 		<key>Keyboard Shortcut</key>
 		<string>$@
 </string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⇧ + ↩</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -179,8 +209,12 @@
 		<key>Keyboard Shortcut</key>
 		<string>@
 </string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ↩</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<false/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -201,8 +235,12 @@
 		<string>添加释放到dealloc里</string>
 		<key>Keyboard Shortcut</key>
 		<string>@k</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + K</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<false/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -223,8 +261,12 @@
 		<string>将Json转成h文件里的属性</string>
 		<key>Keyboard Shortcut</key>
 		<string>$@l</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⇧ + J</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<false/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -245,14 +287,18 @@
 		<string>自动生成创建和解析方法</string>
 		<key>Keyboard Shortcut</key>
 		<string>@j</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + J</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<true/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Alternate</key>
 		<string>NO</string>
 		<key>CommandID</key>
-		<string>IDESourceEditorExtension:com.yingguqing.MyMacPlugin.MyPlugin,IDESourceEditorExtensionCommand:com.yingguqing.MyMacPlugin.MyPlugin.import</string>
+		<string>.import</string>
 		<key>Group</key>
 		<string>Editor Menu for Source Code</string>
 		<key>GroupID</key>
@@ -267,8 +313,12 @@
 		<string>MyPlugin</string>
 		<key>Title</key>
 		<string>导入头文件</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + P</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<false/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -289,8 +339,12 @@
 		<string>选中内容大写</string>
 		<key>Keyboard Shortcut</key>
 		<string>@y</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + Y</string>
 	</dict>
 	<dict>
+		<key>Enable</key>
+		<false/>
 		<key>Action</key>
 		<string>_invokeSourceEditorExtensionCommand:</string>
 		<key>Group</key>
@@ -311,6 +365,8 @@
 		<string>选中内容小写</string>
 		<key>Keyboard Shortcut</key>
 		<string>$@Y</string>
+		<key>ShowShortcut</key>
+		<string>⌘ + ⇧ + Y</string>
 	</dict>
 </array>
 </plist>

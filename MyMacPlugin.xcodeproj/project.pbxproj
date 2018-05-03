@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2832FC2002FD1300623D28 /* LongCommandStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2832FB2002FD1300623D28 /* LongCommandStatement.m */; };
 		EF1644EC1D9273AE0049339B /* uncrustify in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EA1D9273AE0049339B /* uncrustify */; };
 		EF1644ED1D9273AE0049339B /* uncrustify.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EF1644EB1D9273AE0049339B /* uncrustify.cfg */; };
 		EF16ABA61EC955C4007F668A /* ESClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16ABA31EC955C4007F668A /* ESClassInfo.m */; };
@@ -20,7 +21,25 @@
 		EF7E878C1ECC2FFF00B97EC4 /* UserKeyBindings.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF7E878A1ECC2FFF00B97EC4 /* UserKeyBindings.plist */; };
 		EF7E878D1ECC2FFF00B97EC4 /* yingguqing.idekeybindings in Resources */ = {isa = PBXBuildFile; fileRef = EF7E878B1ECC2FFF00B97EC4 /* yingguqing.idekeybindings */; };
 		EF80AAA61EEF9A15005AC352 /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF80AAA51EEF9A15005AC352 /* CommonUtil.swift */; };
-		EF80AAA81EEF9BE7005AC352 /* FormatCodeStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF80AAA71EEF9BE7005AC352 /* FormatCodeStatement.swift */; };
+		EF80AAA81EEF9BE7005AC352 /* FormatSwiftCodeStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF80AAA71EEF9BE7005AC352 /* FormatSwiftCodeStatement.swift */; };
+		EFC1E5D8209B0BDB00D0C53A /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5CF209B0BDB00D0C53A /* CommandLine.swift */; };
+		EFC1E5D9209B0BDB00D0C53A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D0209B0BDB00D0C53A /* Formatter.swift */; };
+		EFC1E5DA209B0BDB00D0C53A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFC1E5D1209B0BDB00D0C53A /* Info.plist */; };
+		EFC1E5DB209B0BDB00D0C53A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D2209B0BDB00D0C53A /* Options.swift */; };
+		EFC1E5DC209B0BDB00D0C53A /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D3209B0BDB00D0C53A /* Rules.swift */; };
+		EFC1E5DD209B0BDB00D0C53A /* RulesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D4209B0BDB00D0C53A /* RulesStore.swift */; };
+		EFC1E5DE209B0BDB00D0C53A /* SwiftFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D6209B0BDB00D0C53A /* SwiftFormat.swift */; };
+		EFC1E5DF209B0BDB00D0C53A /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D7209B0BDB00D0C53A /* Tokenizer.swift */; };
+		EFC1E5E2209B0C8100D0C53A /* CommandErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5E0209B0C8000D0C53A /* CommandErrors.swift */; };
+		EFC1E5E3209B0C8100D0C53A /* XCSourceTextBuffer+SwiftFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5E1209B0C8100D0C53A /* XCSourceTextBuffer+SwiftFormat.swift */; };
+		EFC1E5E6209B120400D0C53A /* RuleSelectionTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5E5209B120400D0C53A /* RuleSelectionTableCellView.m */; };
+		EFC1E5E9209B12E100D0C53A /* RuleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5E8209B12E100D0C53A /* RuleViewModel.m */; };
+		EFC1E5EA209B13F400D0C53A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D0209B0BDB00D0C53A /* Formatter.swift */; };
+		EFC1E5EB209B13F400D0C53A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D2209B0BDB00D0C53A /* Options.swift */; };
+		EFC1E5EC209B13F400D0C53A /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D3209B0BDB00D0C53A /* Rules.swift */; };
+		EFC1E5ED209B13F400D0C53A /* RulesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D4209B0BDB00D0C53A /* RulesStore.swift */; };
+		EFC1E5EE209B13F400D0C53A /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5D7209B0BDB00D0C53A /* Tokenizer.swift */; };
+		EFC1E5F4209B20A100D0C53A /* SwiftRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC1E5F3209B20A100D0C53A /* SwiftRuleViewController.m */; };
 		EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7901D8FED5400B1657E /* AppDelegate.m */; };
 		EFCAF7941D8FED5400B1657E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7931D8FED5400B1657E /* main.m */; };
 		EFCAF7991D8FED5400B1657E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCAF7981D8FED5400B1657E /* Assets.xcassets */; };
@@ -58,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB2832FA2002FD1300623D28 /* LongCommandStatement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongCommandStatement.h; sourceTree = "<group>"; };
+		DB2832FB2002FD1300623D28 /* LongCommandStatement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LongCommandStatement.m; sourceTree = "<group>"; };
 		EF1644EA1D9273AE0049339B /* uncrustify */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = uncrustify; sourceTree = "<group>"; };
 		EF1644EB1D9273AE0049339B /* uncrustify.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uncrustify.cfg; sourceTree = "<group>"; };
 		EF16ABA21EC955C4007F668A /* ESClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESClassInfo.h; sourceTree = "<group>"; };
@@ -81,7 +102,25 @@
 		EF7E878B1ECC2FFF00B97EC4 /* yingguqing.idekeybindings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = yingguqing.idekeybindings; sourceTree = "<group>"; };
 		EF80AAA41EEF9A15005AC352 /* MyPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF80AAA51EEF9A15005AC352 /* CommonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
-		EF80AAA71EEF9BE7005AC352 /* FormatCodeStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatCodeStatement.swift; sourceTree = "<group>"; };
+		EF80AAA71EEF9BE7005AC352 /* FormatSwiftCodeStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatSwiftCodeStatement.swift; sourceTree = "<group>"; };
+		EFC1E5CF209B0BDB00D0C53A /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		EFC1E5D0209B0BDB00D0C53A /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		EFC1E5D1209B0BDB00D0C53A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC1E5D2209B0BDB00D0C53A /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		EFC1E5D3209B0BDB00D0C53A /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		EFC1E5D4209B0BDB00D0C53A /* RulesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesStore.swift; sourceTree = "<group>"; };
+		EFC1E5D5209B0BDB00D0C53A /* SwiftFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftFormat.h; sourceTree = "<group>"; };
+		EFC1E5D6209B0BDB00D0C53A /* SwiftFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFormat.swift; sourceTree = "<group>"; };
+		EFC1E5D7209B0BDB00D0C53A /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		EFC1E5E0209B0C8000D0C53A /* CommandErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandErrors.swift; sourceTree = "<group>"; };
+		EFC1E5E1209B0C8100D0C53A /* XCSourceTextBuffer+SwiftFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCSourceTextBuffer+SwiftFormat.swift"; sourceTree = "<group>"; };
+		EFC1E5E4209B120400D0C53A /* RuleSelectionTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuleSelectionTableCellView.h; sourceTree = "<group>"; };
+		EFC1E5E5209B120400D0C53A /* RuleSelectionTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuleSelectionTableCellView.m; sourceTree = "<group>"; };
+		EFC1E5E7209B12E100D0C53A /* RuleViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuleViewModel.h; sourceTree = "<group>"; };
+		EFC1E5E8209B12E100D0C53A /* RuleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuleViewModel.m; sourceTree = "<group>"; };
+		EFC1E5F1209B1E6000D0C53A /* MyMacPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMacPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		EFC1E5F2209B20A100D0C53A /* SwiftRuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRuleViewController.h; sourceTree = "<group>"; };
+		EFC1E5F3209B20A100D0C53A /* SwiftRuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftRuleViewController.m; sourceTree = "<group>"; };
 		EFCAF78C1D8FED5400B1657E /* XCode插件.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XCode插件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCAF78F1D8FED5400B1657E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCAF7901D8FED5400B1657E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2832F92002FCD900623D28 /* LongCommand */ = {
+			isa = PBXGroup;
+			children = (
+				DB2832FA2002FD1300623D28 /* LongCommandStatement.h */,
+				DB2832FB2002FD1300623D28 /* LongCommandStatement.m */,
+			);
+			path = LongCommand;
+			sourceTree = "<group>";
+		};
 		EF16ABA01EC955C4007F668A /* JsonToProperty */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,11 +204,30 @@
 		EF80AA9F1EEF99C9005AC352 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				EFC1E5CE209B0BDB00D0C53A /* Sources */,
 				EF80AAA51EEF9A15005AC352 /* CommonUtil.swift */,
 				EF80AAA41EEF9A15005AC352 /* MyPlugin-Bridging-Header.h */,
-				EF80AAA71EEF9BE7005AC352 /* FormatCodeStatement.swift */,
+				EF80AAA71EEF9BE7005AC352 /* FormatSwiftCodeStatement.swift */,
+				EFC1E5E0209B0C8000D0C53A /* CommandErrors.swift */,
+				EFC1E5E1209B0C8100D0C53A /* XCSourceTextBuffer+SwiftFormat.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		EFC1E5CE209B0BDB00D0C53A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EFC1E5CF209B0BDB00D0C53A /* CommandLine.swift */,
+				EFC1E5D0209B0BDB00D0C53A /* Formatter.swift */,
+				EFC1E5D1209B0BDB00D0C53A /* Info.plist */,
+				EFC1E5D2209B0BDB00D0C53A /* Options.swift */,
+				EFC1E5D3209B0BDB00D0C53A /* Rules.swift */,
+				EFC1E5D4209B0BDB00D0C53A /* RulesStore.swift */,
+				EFC1E5D5209B0BDB00D0C53A /* SwiftFormat.h */,
+				EFC1E5D6209B0BDB00D0C53A /* SwiftFormat.swift */,
+				EFC1E5D7209B0BDB00D0C53A /* Tokenizer.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		EFCAF7831D8FED5400B1657E = {
@@ -191,6 +258,12 @@
 				EF7E87711ECC1E6C00B97EC4 /* ViewController.m */,
 				EF7E87871ECC2F8000B97EC4 /* KeyBindingsInserter.h */,
 				EF7E87881ECC2F8000B97EC4 /* KeyBindingsInserter.m */,
+				EFC1E5E4209B120400D0C53A /* RuleSelectionTableCellView.h */,
+				EFC1E5E5209B120400D0C53A /* RuleSelectionTableCellView.m */,
+				EFC1E5E7209B12E100D0C53A /* RuleViewModel.h */,
+				EFC1E5E8209B12E100D0C53A /* RuleViewModel.m */,
+				EFC1E5F2209B20A100D0C53A /* SwiftRuleViewController.h */,
+				EFC1E5F3209B20A100D0C53A /* SwiftRuleViewController.m */,
 				EFCAF7921D8FED5400B1657E /* Supporting Files */,
 			);
 			path = MyMacPlugin;
@@ -205,6 +278,7 @@
 				EFCAF7931D8FED5400B1657E /* main.m */,
 				EFCAF7981D8FED5400B1657E /* Assets.xcassets */,
 				EF7E876F1ECC1DF800B97EC4 /* Main.storyboard */,
+				EFC1E5F1209B1E6000D0C53A /* MyMacPlugin-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +303,7 @@
 				EFD482981EC981C5007B493A /* CodeStatement */,
 				EFD4829C1EC981E0007B493A /* InitWithJsonStatement */,
 				EF2732D51ECD4ADC00DFC250 /* ImportStatement */,
+				DB2832F92002FCD900623D28 /* LongCommand */,
 				EFCAF7AE1D8FED6500B1657E /* SourceEditorExtension.h */,
 				EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */,
 				EFCAF7B11D8FED6500B1657E /* SourceEditorCommand.h */,
@@ -335,13 +410,13 @@
 				TargetAttributes = {
 					EFCAF78B1D8FED5400B1657E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = X4G4XZKQ74;
+						DevelopmentTeam = FPDXPT9NT4;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					EFCAF7A61D8FED6500B1657E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = X4G4XZKQ74;
+						DevelopmentTeam = FPDXPT9NT4;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -385,6 +460,7 @@
 			files = (
 				EF1644ED1D9273AE0049339B /* uncrustify.cfg in Resources */,
 				EF1644EC1D9273AE0049339B /* uncrustify in Resources */,
+				EFC1E5DA209B0BDB00D0C53A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +472,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7E87721ECC1E6C00B97EC4 /* ViewController.m in Sources */,
+				EFC1E5E6209B120400D0C53A /* RuleSelectionTableCellView.m in Sources */,
+				EFC1E5EC209B13F400D0C53A /* Rules.swift in Sources */,
+				EFC1E5E9209B12E100D0C53A /* RuleViewModel.m in Sources */,
+				EFC1E5F4209B20A100D0C53A /* SwiftRuleViewController.m in Sources */,
+				EFC1E5EA209B13F400D0C53A /* Formatter.swift in Sources */,
+				EFC1E5EB209B13F400D0C53A /* Options.swift in Sources */,
 				EFCAF7941D8FED5400B1657E /* main.m in Sources */,
+				EFC1E5EE209B13F400D0C53A /* Tokenizer.swift in Sources */,
+				EFC1E5ED209B13F400D0C53A /* RulesStore.swift in Sources */,
 				EFCAF7911D8FED5400B1657E /* AppDelegate.m in Sources */,
 				EF7E87891ECC2F8000B97EC4 /* KeyBindingsInserter.m in Sources */,
 			);
@@ -407,15 +491,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2732D81ECD4AFE00DFC250 /* ImportStatement.m in Sources */,
+				EFC1E5DF209B0BDB00D0C53A /* Tokenizer.swift in Sources */,
 				EFD2B7B81ECEDA2C003957BD /* JavaToObjectCStatement.m in Sources */,
 				EF16ABA71EC955C4007F668A /* ESJsonFormatManager.m in Sources */,
 				EFD4829F1EC9829E007B493A /* InitWithJsonStatement.m in Sources */,
+				EFC1E5DB209B0BDB00D0C53A /* Options.swift in Sources */,
 				EF7E87761ECC1EB400B97EC4 /* CodeStatement.m in Sources */,
-				EF80AAA81EEF9BE7005AC352 /* FormatCodeStatement.swift in Sources */,
+				EFC1E5D8209B0BDB00D0C53A /* CommandLine.swift in Sources */,
+				EFC1E5E2209B0C8100D0C53A /* CommandErrors.swift in Sources */,
+				EF80AAA81EEF9BE7005AC352 /* FormatSwiftCodeStatement.swift in Sources */,
+				DB2832FC2002FD1300623D28 /* LongCommandStatement.m in Sources */,
+				EFC1E5DE209B0BDB00D0C53A /* SwiftFormat.swift in Sources */,
+				EFC1E5DC209B0BDB00D0C53A /* Rules.swift in Sources */,
 				EF80AAA61EEF9A15005AC352 /* CommonUtil.swift in Sources */,
+				EFC1E5DD209B0BDB00D0C53A /* RulesStore.swift in Sources */,
 				EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */,
 				EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */,
 				EF16ABA61EC955C4007F668A /* ESClassInfo.m in Sources */,
+				EFC1E5D9209B0BDB00D0C53A /* Formatter.swift in Sources */,
+				EFC1E5E3209B0C8100D0C53A /* XCSourceTextBuffer+SwiftFormat.swift in Sources */,
 				EFD482971EC981A0007B493A /* Until.m in Sources */,
 				EF16ABAA1EC955DE007F668A /* JsonToPropertyStatement.m in Sources */,
 			);
@@ -551,14 +645,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X4G4XZKQ74;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FPDXPT9NT4;
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin;
+				PRODUCT_MODULE_NAME = XcodePlugin;
 				PRODUCT_NAME = "XCode插件";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin-Bridging-Header.h";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin/MyMacPlugin-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -571,13 +670,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X4G4XZKQ74;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FPDXPT9NT4;
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin;
+				PRODUCT_MODULE_NAME = XcodePlugin;
 				PRODUCT_NAME = "XCode插件";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin-Bridging-Header.h";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin/MyMacPlugin-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -589,17 +693,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MyPlugin/MyPlugin.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = X4G4XZKQ74;
+				DEVELOPMENT_TEAM = FPDXPT9NT4;
 				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
 				INFOPLIST_FILE = MyPlugin/Info.plist;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin.MyPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin.MyPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlugin/Swift/MyPlugin-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -615,17 +721,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MyPlugin/MyPlugin.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = X4G4XZKQ74;
+				DEVELOPMENT_TEAM = FPDXPT9NT4;
 				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
 				INFOPLIST_FILE = MyPlugin/Info.plist;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yingguqing.MyMacPlugin.MyPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin.MyPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlugin/Swift/MyPlugin-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
