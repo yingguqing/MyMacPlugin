@@ -13,5 +13,5 @@
 @property (strong, nonatomic) NSArray *KeyBindArray;
 - (instancetype)initWithPath:(NSString *)path;
 - (void)insertBindings;
-- (void)deleteAllOtherKey;
+- (void)deleteAllOtherKeyWithPath:(NSString *)path;
 @end

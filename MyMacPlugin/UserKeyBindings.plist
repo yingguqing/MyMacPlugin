@@ -368,5 +368,31 @@
 		<key>ShowShortcut</key>
 		<string>⌘ + ⇧ + Y</string>
 	</dict>
+	<dict>
+		<key>Enable</key>
+		<true/>
+		<key>Action</key>
+		<string>_invokeSourceEditorExtensionCommand:</string>
+		<key>Group</key>
+		<string>Editor Menu for Source Code</string>
+		<key>GroupedAlternate</key>
+		<string>NO</string>
+		<key>CommandID</key>
+		<string>.LongCommand</string>
+		<key>Alternate</key>
+		<string>NO</string>
+		<key>Parent Title</key>
+		<string>MyPlugin</string>
+		<key>GroupID</key>
+		<string>Xcode.IDESourceEditor.MenuDefinition.Editor</string>
+		<key>Navigation</key>
+		<string>NO</string>
+		<key>Title</key>
+		<string>/**/注释代码</string>
+		<key>Keyboard Shortcut</key>
+		<string>~^/</string>
+		<key>ShowShortcut</key>
+		<string>^  + ⌥  + Y</string>
+	</dict>
 </array>
 </plist>

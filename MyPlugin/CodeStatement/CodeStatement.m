@@ -248,6 +248,12 @@
 		NSMutableString *stringDuel = [[NSMutableString alloc] init];
 		NSInteger startLine = range.start.line;
 		NSInteger endLine = range.end.line;
+        if (range.end.column == 0) {
+            endLine--;
+        }
+        if (endLine < startLine) {
+            return;
+        }
         NSInteger length = endLine - startLine;
 		if (insertLine < 0) {
 			insertLine = isUp ? startLine : endLine + 1;

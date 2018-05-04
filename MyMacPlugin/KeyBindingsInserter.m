@@ -14,8 +14,6 @@
 #define KeyBindings @"Key Bindings"
 #define CommandID @"CommandID"
 #define KeyboardShortcut @"Keyboard Shortcut"
-// 修改包名，必须对应修改这里
-#define BaseCommandID @"IDESourceEditorExtension:com.49.XcodePlugin.MyPlugin,IDESourceEditorExtensionCommand:com.49.XcodePlugin.MyPlugin"
 #define BindingAlreadySet @"快捷键设置已存在,请在Xcode里查看."
 #define BindingIsSet @"快捷键设置成功,请在Xcode里使用."
 #define CouldNotInstall @"快捷键设置失败.请在系统设置里再试一次."
@@ -35,22 +33,24 @@
         self.path = path;
         vanillaPlistPath = [[NSBundle mainBundle] pathForResource:@"yingguqing" ofType:@"idekeybindings"];
         self.KeyBindArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UserKeyBindings" ofType:@"plist"]];
+        NSString *bunldId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+        NSString *baseCommandId = [NSString stringWithFormat:@"IDESourceEditorExtension:%@.MyPlugin,IDESourceEditorExtensionCommand:yingguqing",bunldId];
         for (NSDictionary *item in _KeyBindArray.objectEnumerator) {
             NSString *comId = item[CommandID];
-            if (![comId hasPrefix:BaseCommandID]) {
-                NSString *newComId = [NSString stringWithFormat:@"%@%@",BaseCommandID,comId];
+            if (![comId hasPrefix:baseCommandId]) {
+                NSString *newComId = [baseCommandId stringByAppendingString:comId];
                 [item setValue:newComId forKey:CommandID];
             }
         }
-        [self deleteAllOtherKey];
     }
     return self;
 }
 
 - (void)insertBindings {
-    if (![[NSFileManager defaultManager] fileExistsAtPath:self.path]) {
-        if (![self installVanillaPlist]) {//不存在文件,就先复制一个
-            return;//复制失败不操作
+    // 快捷键绑定文件不存在
+    if ([[NSFileManager defaultManager] fileExistsAtPath:_path] == false) {
+        if ([self installVanillaPlist] == false) {// 复制文件失败
+            return;
         }
     }
     BOOL success = false;
@@ -65,8 +65,8 @@
     }
 }
 
-- (void)deleteAllOtherKey {
-    NSMutableDictionary *existingPlist = [NSMutableDictionary dictionaryWithContentsOfFile:_path];
+- (void)deleteAllOtherKeyWithPath:(NSString *)path {
+    NSMutableDictionary *existingPlist = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     if (!existingPlist) return;
     NSMutableArray *bindings = [self extractBindingsFrom:existingPlist];
     NSMutableArray *delArray = [NSMutableArray array];
@@ -78,20 +78,19 @@
                 continue;
             }
         }
-        NSString *keyboardShortcut = item[KeyboardShortcut];
-        if (keyboardShortcut == nil || keyboardShortcut.length == 0) {
-            [delArray addObject:item];
-            continue;
-        }
     }
     [bindings removeObjectsInArray:delArray];
-    [existingPlist writeToFile:_path atomically:true];
+    [NSFileManager.defaultManager removeItemAtPath:path error:nil];
+    [existingPlist writeToFile:path atomically:true];
 }
 
-- (BOOL)insertVanillaPlistWith:(NSDictionary *)newKey {
-    if (newKey.count == 0 || _KeyBindArray.count == 0) return false;
+- (BOOL)insertVanillaPlistWith:(NSDictionary *)key {
+    if (key.count == 0 || _KeyBindArray.count == 0) return false;
     // enable 为false的时候，不加入快捷方式
-    if ([newKey[@"Enable"] boolValue] == false) return true;
+    if ([key[@"Enable"] boolValue] == false) return true;
+    NSMutableDictionary *newKey = [key mutableCopy];
+    [newKey removeObjectForKey:@"Enable"];
+    [newKey removeObjectForKey:@"ShowShortcut"];
     NSMutableDictionary *existingPlist = [NSMutableDictionary dictionaryWithContentsOfFile:_path];
     if (!existingPlist) return false;
     NSMutableArray *bindings = [self extractBindingsFrom:existingPlist];

@@ -26,45 +26,45 @@
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
     NSString *identifier = invocation.commandIdentifier;
+    NSLog(@"identifier=%@",identifier);
     if (identifier == nil || identifier.length == 0) {
-        printf("identifier为空");
+        return completionHandler(nil);
     }
-    if ([identifier hasSuffix:@"CopyLineUp"]) {//向上复制选中代码
+    if ([@"yingguqing.CopyLineUp" isEqualToString:identifier]) {//向上复制选中代码
         [CodeStatement statementCopyLine:invocation isUp:true];
-    } else if ([identifier hasSuffix:@"CopyLineDown"]) {//向下复制选中代码
+    } else if ([@"yingguqing.CopyLineDown" isEqualToString:identifier]) {//向下复制选中代码
         [CodeStatement statementCopyLine:invocation isUp:false];
-    } else if ([identifier hasSuffix:@"DeleteLine"]) {//删除选中行代码
+    } else if ([@"yingguqing.DeleteLine" isEqualToString:identifier]) {//删除选中行代码
         [CodeStatement statementDeleteLine:invocation];
-    } else if ([identifier hasSuffix:@"UppercaseString"]) {//选中代码大写
+    } else if ([@"yingguqing.UppercaseString" isEqualToString:identifier]) {//选中代码大写
         [CodeStatement statementUppercaseString:invocation isUpper:true];
-    } else if ([identifier hasSuffix:@"lowercaseString"]) {//选中代码小写
+    } else if ([@"yingguqing.lowercaseString" isEqualToString:identifier]) {//选中代码小写
         [CodeStatement statementUppercaseString:invocation isUpper:false];
-    } else if ([identifier hasSuffix:@"DocumentAdd"]) {//为方法添加注释说明
+    } else if ([@"yingguqing.DocumentAdd" isEqualToString:identifier]) {//为方法添加注释说明
         [CodeStatement statementDocumentAdd:invocation];
-    } else if ([identifier hasSuffix:@"Command"]) {// 使用//注释代码
+    } else if ([@"yingguqing.Command" isEqualToString:identifier]) {// 使用//注释代码
         [CodeStatement statementCommand:invocation];
-    } else if ([identifier hasSuffix:@"FormatCode"]) {// 格式化代码
-        // swift代码格式化
-        if ([@[@"public.swift-source", @"com.apple.dt.playground"] containsObject:invocation.buffer.contentUTI]) {
+    } else if ([@"yingguqing.FormatCode" isEqualToString:identifier]) {// 格式化代码
+        if (invocation.buffer.isSwiftSource) {// swift代码格式化
             [FormatSwiftCodeStatement formatSwiftCodeStatementWithInvocation:invocation completionHandler:completionHandler];
-        } else {//OC代码格式化
+        } else if (invocation.buffer.isOCSource) {//OC代码格式化
             [CodeStatement statementFormatCode:invocation];
         }
-    } else if ([identifier hasSuffix:@"UpInsertEnter"]) {// 向上一行添加一个回车
+    } else if ([@"yingguqing.UpInsertEnter" isEqualToString:identifier]) {// 向上一行添加一个回车
         [CodeStatement statementInsertEnter:invocation isUp:true];
-    } else if ([identifier hasSuffix:@"DownInsertEnter"]) {// 向下一行添加一个回车
+    } else if ([@"yingguqing.DownInsertEnter" isEqualToString:identifier]) {// 向下一行添加一个回车
         [CodeStatement statementInsertEnter:invocation isUp:false];
-    } else if ([identifier hasSuffix:@"AddReleaseToDealloc"]) {// 添加一个释放到dealloc里
+    } else if ([@"yingguqing.AddReleaseToDealloc" isEqualToString:identifier]) {// 添加一个释放到dealloc里
         [CodeStatement statementInsertReleaseToDealloc:invocation];
-    } else if ([identifier hasSuffix:@"JsonToProperty"]) {// 将Json转成h文件里的属性
+    } else if ([@"yingguqing.JsonToProperty" isEqualToString:identifier]) {// 将Json转成h文件里的属性
         [JsonToPropertyStatement statementJsonToProperty:invocation];
-    } else if ([identifier hasSuffix:@"UserInitWithJson"]) {// 自动生成创建和解析方法
+    } else if ([@"yingguqing.UserInitWithJson" isEqualToString:identifier]) {// 自动生成创建和解析方法
         [InitWithJsonStatement statementInitWithJson:invocation];
-    } else if ([identifier hasSuffix:@"import"]) {// 导入头文件
+    } else if ([@"yingguqing.import" isEqualToString:identifier]) {// 导入头文件
         [ImportStatement execute:invocation];
-    } else if ([identifier hasSuffix:@"JavaToObjectC"]) {// Java属性转成OC属性
+    } else if ([@"yingguqing.JavaToObjectC" isEqualToString:identifier]) {// Java属性转成OC属性
         [JavaToObjectCStatement javaToObjectCProperty:invocation];
-    } else if ([identifier hasSuffix:@"JavaToObjectC"]) {// /**/注释代码
+    } else if ([@"yingguqing.LongCommand" isEqualToString:identifier]) {// /**/注释代码
         [LongCommandStatement longCommand:invocation];
     }
     completionHandler(nil);

@@ -37,7 +37,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).CopyLineUp</string>
+					<string>yingguqing.CopyLineUp</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>向上复制</string>
 				</dict>
@@ -45,7 +45,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).CopyLineDown</string>
+					<string>yingguqing.CopyLineDown</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>向下复制</string>
 				</dict>
@@ -53,7 +53,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).DeleteLine</string>
+					<string>yingguqing.DeleteLine</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>删除当前行</string>
 				</dict>
@@ -61,7 +61,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).DocumentAdd</string>
+					<string>yingguqing.DocumentAdd</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>加注释说明</string>
 				</dict>
@@ -69,7 +69,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).Command</string>
+					<string>yingguqing.Command</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>//注释代码</string>
 				</dict>
@@ -77,7 +77,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).FormatCode</string>
+					<string>yingguqing.FormatCode</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>格式化代码</string>
 				</dict>
@@ -85,7 +85,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).UpInsertEnter</string>
+					<string>yingguqing.UpInsertEnter</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>上一行回车</string>
 				</dict>
@@ -93,7 +93,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).DownInsertEnter</string>
+					<string>yingguqing.DownInsertEnter</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>下一行回车</string>
 				</dict>
@@ -101,7 +101,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).AddReleaseToDealloc</string>
+					<string>yingguqing.AddReleaseToDealloc</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>添加释放到dealloc里</string>
 				</dict>
@@ -109,7 +109,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).JsonToProperty</string>
+					<string>yingguqing.JsonToProperty</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>将Json转成h文件里的属性</string>
 				</dict>
@@ -117,7 +117,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).UserInitWithJson</string>
+					<string>yingguqing.UserInitWithJson</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>自动生成创建和解析方法</string>
 				</dict>
@@ -125,7 +125,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).import</string>
+					<string>yingguqing.import</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>导入头文件</string>
 				</dict>
@@ -133,7 +133,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).JavaToObjectC</string>
+					<string>yingguqing.JavaToObjectC</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Java属性转成OC属性</string>
 				</dict>
@@ -141,7 +141,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).UppercaseString</string>
+					<string>yingguqing.UppercaseString</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>选中内容大写</string>
 				</dict>
@@ -149,7 +149,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).lowercaseString</string>
+					<string>yingguqing.lowercaseString</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>选中内容小写</string>
 				</dict>
@@ -157,7 +157,7 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).LongCommand</string>
+					<string>yingguqing.LongCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>/**/注释代码</string>
 				</dict>

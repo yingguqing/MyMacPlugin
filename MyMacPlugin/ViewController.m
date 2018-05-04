@@ -26,6 +26,9 @@
 	[super viewDidLoad];
 	NSString *keyBindingsPath = [NSHomeDirectory() stringByAppendingPathComponent:KeyBindingsPath];
 	keyBinding = [[KeyBindingsInserter alloc] initWithPath:keyBindingsPath];
+    [keyBinding deleteAllOtherKeyWithPath:keyBindingsPath];
+    //NSString *defaultKeyBindingsPath= [NSHomeDirectory() stringByAppendingPathComponent:@"/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings"];
+    //[keyBinding deleteAllOtherKeyWithPath:defaultKeyBindingsPath];
     NSInteger index = 0;
     result = [NSMutableArray new];
     // 生成RuleModel

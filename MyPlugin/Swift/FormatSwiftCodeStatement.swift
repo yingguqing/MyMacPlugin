@@ -9,11 +9,11 @@
 import XcodeKit
 
 extension XCSourceTextBuffer {
-    var isOCSource:Bool {
+    @objc public var isOCSource:Bool {
         return self.contentUTI == "public.objective-c-source"
     }
     
-    var isSwiftSource: Bool {
+    @objc public var isSwiftSource: Bool {
         return ["public.swift-source", "com.apple.dt.playground"].contains(self.contentUTI)
     }
 }
