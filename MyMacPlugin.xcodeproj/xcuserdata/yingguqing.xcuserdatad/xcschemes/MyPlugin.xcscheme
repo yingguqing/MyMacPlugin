@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0930"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EFCAF7A61D8FED6500B1657E"
-               BuildableName = "MyPlugin.appex"
+               BuildableName = "XCode&#x63d2;&#x4ef6;.appex"
                BlueprintName = "MyPlugin"
                ReferencedContainer = "container:MyMacPlugin.xcodeproj">
             </BuildableReference>

@@ -26,7 +26,6 @@
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
     NSString *identifier = invocation.commandIdentifier;
-    NSLog(@"identifier=%@",identifier);
     if (identifier == nil || identifier.length == 0) {
         return completionHandler(nil);
     }
@@ -45,10 +44,10 @@
     } else if ([@"yingguqing.Command" isEqualToString:identifier]) {// 使用//注释代码
         [CodeStatement statementCommand:invocation];
     } else if ([@"yingguqing.FormatCode" isEqualToString:identifier]) {// 格式化代码
-        if (invocation.buffer.isSwiftSource) {// swift代码格式化
-            [FormatSwiftCodeStatement formatSwiftCodeStatementWithInvocation:invocation completionHandler:completionHandler];
-        } else if (invocation.buffer.isOCSource) {//OC代码格式化
+        if (!isSwiftSource(invocation)) {//OC代码格式化
             [CodeStatement statementFormatCode:invocation];
+        } else if (isOCSource(invocation)) {//swift代码格式化
+            [FormatSwiftCodeStatement formatSwiftCodeStatementWithInvocation:invocation completionHandler:completionHandler];
         }
     } else if ([@"yingguqing.UpInsertEnter" isEqualToString:identifier]) {// 向上一行添加一个回车
         [CodeStatement statementInsertEnter:invocation isUp:true];

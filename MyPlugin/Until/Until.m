@@ -8,6 +8,7 @@
 
 #import "Until.h"
 #import <AppKit/AppKit.h>
+#import <XcodeKit/XcodeKit.h>
 
 @implementation Until
 
@@ -99,4 +100,24 @@
     return -1;
 }
 
+BOOL isOCSource(XCSourceEditorCommandInvocation *invocation) {
+    static NSArray *OCSourceArray = nil;
+    OCSourceArray = @[@"public.objective-c-source"];
+    if (invocation) {
+        return [OCSourceArray containsObject:invocation.buffer.contentUTI];
+    }
+    return false;
+}
+
+BOOL isSwiftSource(XCSourceEditorCommandInvocation *invocation) {
+    NSLog(@"%@",invocation.buffer.contentUTI);
+    static NSArray *SwiftSourceArray = nil;
+    SwiftSourceArray = @[@"public.swift-source", @"com.apple.dt.playground"];
+    if (invocation) {
+        return [SwiftSourceArray containsObject:invocation.buffer.contentUTI];
+    }
+    return false;
+}
+
 @end
+

@@ -46,7 +46,7 @@
 		EFCAF7AA1D8FED6500B1657E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCAF7A91D8FED6500B1657E /* Cocoa.framework */; };
 		EFCAF7B01D8FED6500B1657E /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7AF1D8FED6500B1657E /* SourceEditorExtension.m */; };
 		EFCAF7B31D8FED6500B1657E /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF7B21D8FED6500B1657E /* SourceEditorCommand.m */; };
-		EFCAF7B71D8FED6500B1657E /* MyPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFCAF7B71D8FED6500B1657E /* XCode插件.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFCAF7A71D8FED6500B1657E /* XCode插件.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFD2B7B81ECEDA2C003957BD /* JavaToObjectCStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD2B7B71ECEDA2C003957BD /* JavaToObjectCStatement.m */; };
 		EFD482971EC981A0007B493A /* Until.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD482961EC981A0007B493A /* Until.m */; };
 		EFD4829F1EC9829E007B493A /* InitWithJsonStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD4829E1EC9829E007B493A /* InitWithJsonStatement.m */; };
@@ -69,7 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				EFCAF7B71D8FED6500B1657E /* MyPlugin.appex in Embed App Extensions */,
+				EFCAF7B71D8FED6500B1657E /* XCode插件.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +127,7 @@
 		EFCAF7931D8FED5400B1657E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFCAF7981D8FED5400B1657E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFCAF79D1D8FED5400B1657E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCAF7A71D8FED6500B1657E /* XCode插件.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "XCode插件.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCAF7A91D8FED6500B1657E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EFCAF7AD1D8FED6500B1657E /* MyPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPlugin.entitlements; sourceTree = "<group>"; };
 		EFCAF7AE1D8FED6500B1657E /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				EFCAF78C1D8FED5400B1657E /* XCode插件.app */,
-				EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */,
+				EFCAF7A71D8FED6500B1657E /* XCode插件.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 			);
 			name = MyPlugin;
 			productName = MyPlugin;
-			productReference = EFCAF7A71D8FED6500B1657E /* MyPlugin.appex */;
+			productReference = EFCAF7A71D8FED6500B1657E /* XCode插件.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -405,18 +405,18 @@
 		EFCAF7841D8FED5400B1657E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "影孤清";
 				TargetAttributes = {
 					EFCAF78B1D8FED5400B1657E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = FPDXPT9NT4;
+						DevelopmentTeam = E3N24VTN26;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					EFCAF7A61D8FED6500B1657E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = FPDXPT9NT4;
+						DevelopmentTeam = E3N24VTN26;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -540,6 +540,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -547,6 +548,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -599,6 +601,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -606,6 +609,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -648,7 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FPDXPT9NT4;
+				DEVELOPMENT_TEAM = E3N24VTN26;
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin;
@@ -658,7 +662,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin/MyMacPlugin-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -673,7 +677,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FPDXPT9NT4;
+				DEVELOPMENT_TEAM = E3N24VTN26;
 				INFOPLIST_FILE = MyMacPlugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin;
@@ -682,7 +686,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyMacPlugin/MyMacPlugin-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -697,19 +701,20 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = FPDXPT9NT4;
+				DEVELOPMENT_TEAM = E3N24VTN26;
 				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
 				INFOPLIST_FILE = MyPlugin/Info.plist;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin.MyPlugin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "XCode插件";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlugin/Swift/MyPlugin-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = appex;
 			};
@@ -725,18 +730,19 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = FPDXPT9NT4;
+				DEVELOPMENT_TEAM = E3N24VTN26;
 				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
 				INFOPLIST_FILE = MyPlugin/Info.plist;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.49.XcodePlugin.MyPlugin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "XCode插件";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlugin/Swift/MyPlugin-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = appex;
 			};

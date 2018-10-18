@@ -390,9 +390,9 @@
 		<key>Title</key>
 		<string>/**/注释代码</string>
 		<key>Keyboard Shortcut</key>
-		<string>~^/</string>
+		<string>@^/</string>
 		<key>ShowShortcut</key>
-		<string>^  + ⌥  + Y</string>
+		<string>^  + ⌘  + /</string>
 	</dict>
 </array>
 </plist>

@@ -13,12 +13,8 @@
 NSString *const objcImport = @".*#.*(import|include).*[\",<].*[\",>]";
 NSString *const objcModuleImport = @".*@.*(import).*.;";
 NSString *const swiftModuleImport = @".*(import) +.*.";
-
-/// Double import strings
-/// Note: For the `doubleImportWarningString` string, we're using a non-breaking space (\u00A0), not a normal space
 NSString *const doubleImportWarningString = @"🚨 这个头文件已被导入 🚨";
 NSString *const cancelRemoveImportButtonString = @"完成";
-
 
 @implementation ImportStatement
 
@@ -48,17 +44,24 @@ static NSRegularExpression *swiftModuleImportRegex;
 }
 
 + (void)execute:(XCSourceEditorCommandInvocation *_Nonnull)invocation {
-    //NSInteger lineToRemove = NSNotFound;
+    
     XCSourceTextRange *selection = invocation.buffer.selections.firstObject;
     NSUInteger selectionLine = selection.start.line;
     NSString *importString = [invocation.buffer.lines[selectionLine] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    XCSourceTextRange *selectionPosition = nil;
     
     if (![self isValid:importString invocation:invocation]) {
+        NSUInteger start = 0;
         if ([self isSwiftSource:invocation]) {
             [invocation.buffer.lines insertObject:@"import <#header#>" atIndex:selectionLine];
+            start = 7;
         } else {
             [invocation.buffer.lines insertObject:@"#import \"<#header#>\"" atIndex:selectionLine];
+            start = 9;
         }
+        selectionPosition = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(selectionLine, start) end:XCSourceTextPositionMake(selectionLine, start + 6)];
+        [invocation.buffer.selections removeAllObjects];
+        [invocation.buffer.selections addObject:selectionPosition];
         return;
     }
     
@@ -86,7 +89,7 @@ static NSRegularExpression *swiftModuleImportRegex;
             
             NSModalResponse response = [doubleImportAlert runModal];
             if (response == NSAlertFirstButtonReturn) {
-                XCSourceTextRange *selectionPosition = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(0, 0) end:XCSourceTextPositionMake(0, 0)];
+                XCSourceTextRange *selectionPosition = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(selectionLine, 0) end:XCSourceTextPositionMake(selectionLine, 0)];
                 [invocation.buffer.selections removeAllObjects];
                 [invocation.buffer.selections insertObject:selectionPosition atIndex:0];
                 [invocation.buffer.lines removeObjectAtIndex:lineToRemove];
@@ -99,13 +102,14 @@ static NSRegularExpression *swiftModuleImportRegex;
         return;
     }
     
+    // 将头文件移到顶部去
     [invocation.buffer.lines removeObjectAtIndex:selectionLine];
     [invocation.buffer.lines insertObject:importString atIndex:line];
     
     //add a new selection. Bug fix for #7
-    XCSourceTextRange *selectionPosition = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(0, 0) end:XCSourceTextPositionMake(0, 0)];
+    selectionPosition = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(selectionLine + 1, 0) end:XCSourceTextPositionMake(selectionLine + 1, 0)];
     [invocation.buffer.selections removeAllObjects];
-    [invocation.buffer.selections insertObject:selectionPosition atIndex:0];
+    [invocation.buffer.selections addObject:selectionPosition];
 }
 
 + (BOOL)isValid:(NSString *)importString invocation:(XCSourceEditorCommandInvocation *)invocation {

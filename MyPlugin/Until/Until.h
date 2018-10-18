@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class XCSourceEditorCommandInvocation;
 @interface Until : NSObject
 + (void)showMsg:(NSString *)msg;
 + (BOOL)isWhitespaceOrNewline:(NSString *)str;
@@ -25,4 +26,8 @@
  *  @return  目标文字所在行,不存在是返回-1,如果在范围内遇到结束文字,文字所以行就加上总行数
  */
 + (NSInteger)findStringIndex:(NSString *)searchString endString:(NSString *)endString findRang:(NSRange)range allString:(NSArray<NSString *> *)allString isOrder:(BOOL)isOrder;
+
+BOOL isOCSource(XCSourceEditorCommandInvocation *invocation);
+BOOL isSwiftSource(XCSourceEditorCommandInvocation *invocation);
 @end
+
