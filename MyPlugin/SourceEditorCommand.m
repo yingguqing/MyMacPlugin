@@ -46,7 +46,7 @@
     } else if ([@"yingguqing.FormatCode" isEqualToString:identifier]) {// 格式化代码
         if (!isSwiftSource(invocation)) {//OC代码格式化
             [CodeStatement statementFormatCode:invocation];
-        } else if (isOCSource(invocation)) {//swift代码格式化
+        } else {//swift代码格式化
             [FormatSwiftCodeStatement formatSwiftCodeStatementWithInvocation:invocation completionHandler:completionHandler];
         }
     } else if ([@"yingguqing.UpInsertEnter" isEqualToString:identifier]) {// 向上一行添加一个回车
