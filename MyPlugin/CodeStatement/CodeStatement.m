@@ -77,7 +77,7 @@
         NSInteger startLine = range.start.line;
         NSInteger linecount = [invocation.buffer.lines count];
         BOOL valid = NO;
-        BOOL needUp = YES;        // 需要向上检索
+        BOOL needUp = YES;            // 需要向上检索
         for (NSInteger index = startLine; index < linecount; index++) {
             NSString *line = [Until deleteFirstSpace:invocation.buffer.lines[index]];
             if ((line != nil) && (line.length > 0) && ![line isEqualToString:@"\n"]) {
@@ -96,7 +96,7 @@
                         insertLine = index;
                     }
                 }
-                if (valid) break;                                        // 已经检测到结尾
+                if (valid) break;                                                                            // 已经检测到结尾
             }
         }
 
@@ -284,7 +284,7 @@
     for (XCSourceTextRange *range in invocation.buffer.selections) {
         NSInteger startLine = range.start.line;
         NSInteger endLine = range.end.line;
-        if (newLine == -1) newLine = startLine;                                                        // 标记选中位置,用于最后光标位置
+        if (newLine == -1) newLine = startLine;                                                                                                            // 标记选中位置,用于最后光标位置
 
         NSInteger length = endLine + 1 - startLine;
         NSRange deleteRange = NSMakeRange(range.start.line, length);
@@ -345,7 +345,7 @@
         [selectString appendString:s];
         removeIndexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(range.start.line, endLine + 1 - startLine)];
     }
-    NSArray *array = [self formatCodeWithString:selectString];        // 格式化内容
+    NSArray *array = [self formatCodeWithString:selectString];            // 格式化内容
     if (array && (array.count > 0)) {// 将格式化后的内容替换旧内容
         [invocation.buffer.lines removeObjectsAtIndexes:removeIndexSet];
         [invocation.buffer.lines insertObjects:array atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(insertIndex, array.count)]];
@@ -359,6 +359,8 @@
 #pragma mark - 格式化输入文字
 + (NSArray *)formatCodeWithString:(NSString *)string {
     if (!string || (string.length == 0)) return nil;
+
+    NSLog(@"5");
 
     NSPipe *errorPipe = [NSPipe new];
     NSPipe *outputPipe = [NSPipe new];
@@ -388,13 +390,24 @@
     [task launch];
     [task waitUntilExit];
 
-    [[errorPipe fileHandleForReading] readDataToEndOfFile];
-    NSData *outputData = [[outputPipe fileHandleForReading] readDataToEndOfFile];
-    NSString *outputString = [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
+    NSData *errorData = [[errorPipe fileHandleForReading] readDataToEndOfFile];
+    if (errorData) {
+        NSString *errorString = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
+        NSLog(@"格式化代码出错：%@", errorString);
+    }
     NSMutableArray *array = [NSMutableArray array];
-    [outputString enumerateLinesUsingBlock:^(NSString *_Nonnull line, BOOL *_Nonnull stop) {
-        [array addObject:line];
-    }];
+    NSData *outputData = [[outputPipe fileHandleForReading] readDataToEndOfFile];
+    if (outputData) {
+        NSString *outputString = [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
+        [outputString enumerateLinesUsingBlock:^(NSString *_Nonnull line, BOOL *_Nonnull stop) {
+            [array addObject:line];
+        }];
+    }
+    if (array.count == 0) {
+        [string enumerateLinesUsingBlock:^(NSString *_Nonnull line, BOOL *_Nonnull stop) {
+            [array addObject:line];
+        }];
+    }
     return array;
 }
 
@@ -486,7 +499,7 @@
             // 获取@implementation的位置
             NSUInteger startIndex = [Until findStringIndex:@"@implementation" endString:@"@interface" findRang:NSMakeRange(range.start.line, count) allString:invocation.buffer.lines isOrder:false];
             NSUInteger endIndex = -1;
-            if (startIndex >= count) {        // 在查找implementation时,遇到interface
+            if (startIndex >= count) {            // 在查找implementation时,遇到interface
                 NSString *string = invocation.buffer.lines[startIndex - count];
                 NSRange r = [string rangeOfString:@"@interface"];
                 NSRange r1 = [string rangeOfString:@"("];
@@ -498,7 +511,7 @@
                     name = [name stringByReplacingOccurrencesOfString:@" " withString:@""];
                     // 查找implementation+实体名称
                     startIndex = [Until findStringIndex:[NSString stringWithFormat:@"@implementation %@", name] endString:nil findRang:NSMakeRange(0, count) allString:invocation.buffer.lines isOrder:true];
-                    if (startIndex != -1) {        // 如果存在,则查找end的位置
+                    if (startIndex != -1) {            // 如果存在,则查找end的位置
                         endIndex = [Until findStringIndex:@"@end" endString:nil findRang:NSMakeRange(startIndex, count - range.start.line) allString:invocation.buffer.lines isOrder:true];
                     }
                 } else {//不存在实体名称时
@@ -543,7 +556,7 @@
 
     for (NSInteger i = string.length - 1; i >= 0; i--) {
         char sub = [string characterAtIndex:i];
-        if ((sub == ';') || (sub == '=')) {        // 以;和=为变量名的识别开始
+        if ((sub == ';') || (sub == '=')) {            // 以;和=为变量名的识别开始
             isStart = true;
             continue;
         }
@@ -566,7 +579,7 @@
                     continue;
                 } else if (i == 0) {// 如果到了开头,则完全符合
                     startIndex = 0;
-                } else if ((sub == ' ') || (sub == '*')) {        // 如果是空格或者"*",就要判断后面的一个字母是否符合变量命名
+                } else if ((sub == ' ') || (sub == '*')) {            // 如果是空格或者"*",就要判断后面的一个字母是否符合变量命名
                     char c = [string characterAtIndex:i + 1];
                     if ((c == '_') || ((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z'))) {
                         startIndex = i + 1;
@@ -631,12 +644,12 @@
     BOOL isStartSearch = false;
     NSUInteger startIndex = 0;
     for (NSUInteger i = range.location; i < count; i++) {
-        startIndex = 0;        // 开始查找方法名结束
+        startIndex = 0;            // 开始查找方法名结束
         NSString *string = allString[i];
         NSRange r = [string rangeOfString:methodName];
-        if (r.location != NSNotFound) {        // 当前行有方法名
+        if (r.location != NSNotFound) {            // 当前行有方法名
             isStartSearch = true;// 设置可以查找
-            startIndex = r.location + r.length;        // 当前行的查找开始位置为方法名后
+            startIndex = r.location + r.length;            // 当前行的查找开始位置为方法名后
         }
         if (isStartSearch) {
             for (NSInteger j = startIndex; j < string.length; j++) {

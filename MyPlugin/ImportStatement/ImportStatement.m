@@ -52,11 +52,16 @@ static NSRegularExpression *swiftModuleImportRegex;
     
     if (![self isValid:importString invocation:invocation]) {
         NSUInteger start = 0;
+        NSString *selectString = @"<#header#>";
+        if (selection.start.line == selection.end.line && selection.start.column != selection.end.column) {
+            // 有选中内容
+            selectString = [invocation.buffer.lines[selectionLine] substringWithRange:NSMakeRange(selection.start.column, selection.end.column - selection.start.column)];
+        }
         if ([self isSwiftSource:invocation]) {
-            [invocation.buffer.lines insertObject:@"import <#header#>" atIndex:selectionLine];
+            [invocation.buffer.lines insertObject:[NSString stringWithFormat:@"import %@",selectString] atIndex:selectionLine];
             start = 7;
         } else {
-            [invocation.buffer.lines insertObject:@"#import \"<#header#>\"" atIndex:selectionLine];
+            [invocation.buffer.lines insertObject:[NSString stringWithFormat:@"#import \"%@.h\"",selectString] atIndex:selectionLine];
             start = 9;
         }
         selectionPosition = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(selectionLine, start) end:XCSourceTextPositionMake(selectionLine, start + 6)];
